@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".Main_Horario_Activity">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical">
+
+        <ScrollView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <LinearLayout
+                android:id="@+id/scHorario"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical">
+
+                <TextView
+                    android:id="@+id/tvHorario"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:gravity="center"
+                    android:background="#5DAEA7"
+                    android:text="HORARIO PABELLON DE LAHIGUERA MUNICIPAL"
+                    android:textSize="16sp"
+                    android:textStyle="bold" />
+
+                <ListView
+                    android:id="@+id/lvDatos"
+                    android:layout_width="match_parent"
+                    android:layout_height="661dp"
+                    android:background="#8EE890"
+                    android:fadingEdge="horizontal"
+                    android:footerDividersEnabled="true"
+                    android:headerDividersEnabled="true"
+                    android:scrollbars="horizontal" />
+            </LinearLayout>
+        </ScrollView>
+
+    </LinearLayout>
+
+</androidx.constraintlayout.widget.ConstraintLayout>
