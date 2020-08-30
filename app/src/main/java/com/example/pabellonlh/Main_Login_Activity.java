@@ -83,6 +83,8 @@ public class Main_Login_Activity extends AppCompatActivity {
 
                 parametros.put("nick", usuario);
                 parametros.put("pass", password);
+              /*/  Intent intent = new Intent(getApplicationContext(), Main_CargandoUsuario_Activity.class);
+                intent.putExtra("nick", usuario);*/
 
                 return parametros;
             }
@@ -108,3 +110,4 @@ public class Main_Login_Activity extends AppCompatActivity {
     }
 
 }
+

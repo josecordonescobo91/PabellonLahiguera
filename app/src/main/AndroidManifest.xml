@@ -9,44 +9,29 @@
     <application
         android:allowBackup="true"
         android:icon="@mipmap/ic_launcher"
-        android:label="@string/app_name"
+        android:label="Cordones"
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/AppTheme"
         android:usesCleartextTraffic="true">
-        <activity android:name=".Main_AlquilarPista_Activity"></activity>
-        <activity android:name=".Main_EliminarEditar_MiPista_Activity">
+        <activity android:name=".Main_CargandoUsuario_Activity">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
-        <activity android:name=".Main_MisPistas_Activity">
-            <intent-filter>
-                <action android:name="android.intent.action.MAIN" />
-
-                <category android:name="android.intent.category.LAUNCHER" />
-            </intent-filter>
-        </activity>
-        <activity android:name=".Main_RegistrarUsuario_Activity">
-            <intent-filter>
-                <action android:name="android.intent.action.MAIN" />
-
-                <category android:name="android.intent.category.LAUNCHER" />
-            </intent-filter>
-        </activity>
+        <activity android:name=".Main_DiasBicicletas_Activity"/>
+        <activity android:name=".Main_AlquilarBicicleta_Activity" />
+        <activity android:name=".Main_AlquilarPista_Activity" />
+        <activity android:name=".Main_EliminarEditar_MiPista_Activity" />
+        <activity android:name=".Main_MisPistas_Activity" />
+        <activity android:name=".Main_RegistrarUsuario_Activity" />
         <activity android:name=".Main_Precios_Activity" />
         <activity android:name=".Main_Horario_Activity" />
         <activity android:name=".Main_Login_Activity" />
         <activity android:name=".Main_Inicio_Activity" />
-        <activity android:name=".MainActivity">
-            <intent-filter>
-                <action android:name="android.intent.action.MAIN" />
-
-                <category android:name="android.intent.category.LAUNCHER" />
-            </intent-filter>
-        </activity>
+        <activity android:name=".MainActivity" />
     </application>
 
 </manifest>

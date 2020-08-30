@@ -9,34 +9,37 @@
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        android:orientation="horizontal"
-        tools:layout_editor_absoluteX="1dp"
-        tools:layout_editor_absoluteY="1dp">
+        android:orientation="vertical">
 
         <ScrollView
             android:layout_width="match_parent"
-            android:layout_height="match_parent"
-            android:background="#5DAEA7">
+            android:layout_height="match_parent">
 
             <LinearLayout
+                android:id="@+id/scHorario"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:orientation="vertical">
 
                 <TextView
-                    android:id="@+id/tvPrecios"
-                    android:layout_width="wrap_content"
+                    android:id="@+id/textView"
+                    android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:gravity="center"
-                    android:text="PRECIOS PABELLON MUNICIPAL DE LAHIGUERA"
-                    android:textSize="16sp"
-                    android:textStyle="bold" />
+                    android:background="#5DAEA7"
+                    android:text="PRECIOS"
+                    android:textSize="30sp"
+                    android:textStyle="bold"/>
 
                 <ListView
                     android:id="@+id/lvPrecios"
-                    android:layout_width="409dp"
-                    android:layout_height="729dp"
-                    android:background="#8EE890">
+                    android:layout_width="match_parent"
+                    android:layout_height="661dp"
+                    android:background="#8EE890"
+                    android:fadingEdge="horizontal"
+                    android:footerDividersEnabled="true"
+                    android:headerDividersEnabled="true"
+                    android:scrollbars="horizontal">
 
                 </ListView>
             </LinearLayout>

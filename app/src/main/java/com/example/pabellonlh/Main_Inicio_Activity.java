@@ -82,6 +82,12 @@ public class Main_Inicio_Activity extends AppCompatActivity {
 
     public void AlquilarPista (View view){
         Intent Alquilar = new Intent(this, Main_AlquilarPista_Activity.class);
+        Alquilar.putExtra("usuario", usuario);
         startActivity(Alquilar);
+    }
+
+    public void IrInicio (View view){
+        Intent Inicio = new Intent(this, MainActivity.class);
+        startActivity(Inicio);
     }
 }
