@@ -16,19 +16,25 @@
             android:orientation="vertical" >
 
             <TextView
+                android:id="@+id/tvPrueba"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="TextView" />
+
+            <TextView
                 android:id="@+id/textView"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:background="#5DAEA7"
                 android:gravity="center"
-                android:text="BICILETAS LIBRES"
+                android:text="BICICLETAS LIBRES"
                 android:textSize="30sp"
                 android:textStyle="bold" />
 
             <ListView
                 android:id="@+id/lvMisBicicletas"
                 android:layout_width="wrap_content"
-                android:layout_height="645dp" />
+                android:layout_height="521dp" />
         </LinearLayout>
     </ScrollView>
 </LinearLayout>

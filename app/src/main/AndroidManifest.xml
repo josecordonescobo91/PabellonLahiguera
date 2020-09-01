@@ -21,7 +21,8 @@
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
-        <activity android:name=".Main_DiasBicicletas_Activity"/>
+        <activity android:name=".Main_AddBicicleta_Activity"/>
+        <activity android:name=".Main_DiasBicicletas_Activity" />
         <activity android:name=".Main_AlquilarBicicleta_Activity" />
         <activity android:name=".Main_AlquilarPista_Activity" />
         <activity android:name=".Main_EliminarEditar_MiPista_Activity" />

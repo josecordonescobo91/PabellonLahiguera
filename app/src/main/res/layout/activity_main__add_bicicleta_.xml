@@ -4,8 +4,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:orientation="vertical"
-    tools:context=".Main_EliminarEditar_MiPista_Activity">
+    tools:context=".Main_AddBicicleta_Activity">
 
     <ScrollView
         android:layout_width="match_parent"
@@ -18,83 +17,79 @@
             android:orientation="vertical" >
 
             <TextView
-                android:id="@+id/textView4"
+                android:id="@+id/textView2"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:gravity="center"
-                android:text="FECHA:"
                 android:textSize="24sp"
-                android:textStyle="bold" />
+                android:textStyle="bold"
+                android:text="DIA:" />
 
             <EditText
-                android:id="@+id/edFecha"
+                android:id="@+id/edDia"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:ems="10"
                 android:enabled="false"
                 android:gravity="center"
-                android:inputType="textPersonName"
-                android:text="Name" />
+                android:ems="10"
+                android:inputType="textPersonName" />
 
             <TextView
-                android:id="@+id/textView3"
+                android:id="@+id/textView7"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:gravity="center"
-                android:text="HORA:"
                 android:textSize="24sp"
-                android:textStyle="bold" />
+                android:textStyle="bold"
+                android:text="BICICLETA:" />
 
             <EditText
-                android:id="@+id/edHora"
+                android:id="@+id/edBici"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:ems="10"
                 android:enabled="false"
                 android:gravity="center"
-                android:inputType="textPersonName"
-                android:text="Name" />
+                android:ems="10"
+                android:inputType="textPersonName" />
 
             <TextView
-                android:id="@+id/textView5"
+                android:id="@+id/textView8"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:gravity="center"
-                android:text="PISTA:"
                 android:textSize="24sp"
-                android:textStyle="bold" />
+                android:textStyle="bold"
+                android:text="USUARIO:" />
 
             <EditText
-                android:id="@+id/edPista"
+                android:id="@+id/edUsuario"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:ems="10"
                 android:enabled="false"
                 android:gravity="center"
-                android:inputType="textPersonName"
-                android:text="Name" />
+                android:ems="10"
+                android:inputType="textPersonName" />
 
             <TextView
-                android:id="@+id/textView6"
+                android:id="@+id/textView9"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:gravity="center"
-                android:text="MATERIAL"
                 android:textSize="24sp"
-                android:textStyle="bold" />
+                android:textStyle="bold"
+                android:text="TELEFONO:" />
 
-            <Spinner
-                android:id="@+id/snMaterial"
-                android:layout_width="115dp"
+            <EditText
+                android:id="@+id/edTelefono"
+                android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:layout_marginLeft="150dp"
-                android:gravity="right"
-                android:padding="12dp"
-                android:textAlignment="gravity"
-                android:verticalScrollbarPosition="left" />
+                android:enabled="false"
+                android:gravity="center"
+                android:ems="10"
+                android:inputType="textPersonName" />
 
             <Button
-                android:id="@+id/btEliminar"
+                android:id="@+id/btnAlquilarBici"
                 android:layout_width="match_parent"
                 android:textColor="#FFF"
                 android:textSize="14sp"
@@ -103,33 +98,19 @@
                 android:layout_marginTop="5dp"
                 android:layout_marginRight="15dp"
                 android:background="#1976d2"
-                android:text="ELIMINAR" />
-
-            <Button
-                android:id="@+id/btEditar"
-                android:layout_width="match_parent"
-                android:textColor="#FFF"
-                android:textSize="14sp"
-                android:layout_height="35dp"
-                android:layout_marginLeft="15dp"
-                android:layout_marginTop="10dp"
-                android:layout_marginRight="15dp"
-                android:background="#1976d2"
-                android:text="EDITAR" />
+                android:text="ALQUILAR" />
 
             <TextView
-                android:id="@+id/spMate"
+                android:id="@+id/tvIDPERSONA"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:text="TextView"
-                android:visibility="invisible" />
-            <TextView
-                android:id="@+id/nada"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:text="TextView"
-                android:visibility="invisible" />
+                android:text="TextView" />
 
+            <TextView
+                android:id="@+id/tvIDBICI"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="TextView" />
         </LinearLayout>
     </ScrollView>
 </LinearLayout>

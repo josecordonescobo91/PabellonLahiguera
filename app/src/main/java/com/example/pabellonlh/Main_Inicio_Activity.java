@@ -41,10 +41,16 @@ public class Main_Inicio_Activity extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main__inicio_);
-
+        tvNombre = findViewById(R.id.tvNombre);
 
         Intent intent = getIntent();
         usuario = intent.getStringExtra("usuario");
+
+        if(usuario == null){
+            recuperarPreferendias();
+        }
+
+
 
 
         btnCerrarSesion=findViewById(R.id.btnCerrarSesion);
@@ -69,7 +75,7 @@ public class Main_Inicio_Activity extends AppCompatActivity {
                 Intent intent = new Intent(getApplicationContext(), Main_MisPistas_Activity.class);
                 intent.putExtra("usuario", usuario);
                 startActivity(intent);
-             //   finish();
+                //   finish();
 
             }
 
@@ -77,6 +83,14 @@ public class Main_Inicio_Activity extends AppCompatActivity {
         });
 
 
+
+    }
+
+    private void recuperarPreferendias(){
+        SharedPreferences preferences = getSharedPreferences("preferenciasLogin", Context.MODE_PRIVATE);
+        tvNombre.setText(preferences.getString("usuario", ""));
+
+        usuario = tvNombre.getText().toString();
 
     }
 

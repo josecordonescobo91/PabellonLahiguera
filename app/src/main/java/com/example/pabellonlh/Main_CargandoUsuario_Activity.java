@@ -34,10 +34,10 @@ public class Main_CargandoUsuario_Activity extends AppCompatActivity {
                 SharedPreferences preferences = getSharedPreferences("preferenciasLogin", Context.MODE_PRIVATE);
                 boolean sesion = preferences.getBoolean("sesion", false);
                 if(sesion){
-                    Intent intent = new Intent(getApplicationContext(), Main_Login_Activity.class);
-                   // String usuario= intent.getStringExtra("usuario");
-                    //intent.putExtra("usuario", usuario);
-                    //tvPrueba.setText(usuario);
+                    Intent intent = new Intent(getApplicationContext(), Main_Inicio_Activity.class);
+                 //   String usuario= intent.getStringExtra("usuario");
+                //    intent.putExtra("usuario", usuario);
+                 //   tvPrueba.setText("BIIIIIIEEEEEEEN"+usuario);
                     startActivity(intent);
                     finish();
                 }else {

@@ -75,5 +75,13 @@
             android:textColor="#FFF"
             android:textSize="18sp" />
 
+        <TextView
+            android:id="@+id/tvNombre"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="TextView"
+            android:visibility="invisible"
+            tools:visibility="invisible" />
+
     </LinearLayout>
 </androidx.constraintlayout.widget.ConstraintLayout>
