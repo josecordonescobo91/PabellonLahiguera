@@ -56,11 +56,11 @@ public class Main_EliminarEditar_MiPista_Activity extends AppCompatActivity {
         btEliminar = (Button) findViewById(R.id.btEliminar);
         btEditar = (Button) findViewById(R.id.btEditar);
         idPista = intent.getStringExtra("objetoData");
-        String[] parts = idPista.split("       ");
+        String[] parts = idPista.split("        ");
         String fecha = parts[0];
         String hora = parts[1];
         String pista = parts[3];
-        String sesionNick = parts[4];
+       // String sesionNick = parts[4];
 
         edFecha.setText(fecha);
         edHora.setText(hora);
@@ -170,7 +170,7 @@ public class Main_EliminarEditar_MiPista_Activity extends AppCompatActivity {
             public void onClick(View v) {
 
 
-                EliminarPista("http://jose-cordones.es/app/eliminarAlquiler.php?idalquiler="+ finalId);
+                EliminarPista("http://jose-cordones.es/app/eliminaciones/eliminarAlquiler.php?idalquiler="+ finalId);
                 Intent intent = new Intent(getApplicationContext(), Main_Inicio_Activity.class);
                 intent.putExtra("usuario", finalNick);
                 startActivity(intent);
@@ -201,7 +201,7 @@ public class Main_EliminarEditar_MiPista_Activity extends AppCompatActivity {
                 });
 
                 String valorSpi = spMate.getText().toString();
-                ActualizarPistas("http://jose-cordones.es/app/actualizarMiPista.php?material="+ valorSpi+"&id_info_posible_reserva="+ finalIdInformacion+"&idalquiler="+ finalId+"&idpersona="+ finalIdPersona+"&pagado="+ finalPagado+"&devuelto="+ finalDevuelto);
+                ActualizarPistas("http://jose-cordones.es/app/actualizaciones/actualizarMiPista.php?material="+ valorSpi+"&id_info_posible_reserva="+ finalIdInformacion+"&idalquiler="+ finalId+"&idpersona="+ finalIdPersona+"&pagado="+ finalPagado+"&devuelto="+ finalDevuelto);
                 Intent intent = new Intent(getApplicationContext(), Main_Inicio_Activity.class);
                 intent.putExtra("usuario", finalNick);
                 startActivity(intent);

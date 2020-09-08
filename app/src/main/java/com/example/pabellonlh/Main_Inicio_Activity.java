@@ -6,35 +6,17 @@ import android.content.Context;
 import android.content.Intent;
 import android.content.SharedPreferences;
 import android.os.Bundle;
-import android.util.Log;
 import android.view.View;
 import android.widget.Button;
 import android.widget.TextView;
-import android.view.View;
-import android.widget.Toast;
-
-import com.android.volley.AuthFailureError;
-import com.android.volley.Request;
-import com.android.volley.RequestQueue;
-import com.android.volley.Response;
-import com.android.volley.VolleyError;
-import com.android.volley.toolbox.StringRequest;
-import com.android.volley.toolbox.Volley;
-import com.loopj.android.http.AsyncHttpClient;
-
-import org.json.JSONArray;
-import org.json.JSONException;
-
-import java.net.URL;
-import java.util.HashMap;
-import java.util.Map;
 
 public class Main_Inicio_Activity extends AppCompatActivity {
 
-    Button btnCerrarSesion, btnMisPistas;
+    Button btnCerrarSesion, btnMisAlquiler, btnMisBicicletas;
     TextView tvNombre;
     //private AsyncHttpClient cliente;
     String usuario;
+
 
 
     @Override
@@ -54,7 +36,11 @@ public class Main_Inicio_Activity extends AppCompatActivity {
 
 
         btnCerrarSesion=findViewById(R.id.btnCerrarSesion);
-        btnMisPistas=findViewById(R.id.btnMisPistas);
+        btnMisAlquiler=findViewById(R.id.btnMisAlquiler);
+        btnMisBicicletas=findViewById(R.id.btnMisBicicletas);
+
+
+
 
         btnCerrarSesion.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -68,11 +54,11 @@ public class Main_Inicio_Activity extends AppCompatActivity {
             }
         });
 
-        btnMisPistas.setOnClickListener(new View.OnClickListener() {
+        btnMisAlquiler.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
 
-                Intent intent = new Intent(getApplicationContext(), Main_MisPistas_Activity.class);
+                Intent intent = new Intent(getApplicationContext(), Main_MisAlquiler_Activity.class);
                 intent.putExtra("usuario", usuario);
                 startActivity(intent);
                 //   finish();
@@ -81,6 +67,7 @@ public class Main_Inicio_Activity extends AppCompatActivity {
 
 
         });
+
 
 
 

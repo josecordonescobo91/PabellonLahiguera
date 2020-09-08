@@ -16,7 +16,7 @@
             android:orientation="vertical" >
 
             <TextView
-                android:id="@+id/textView"
+                android:id="@+id/tvTitulo"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:gravity="center"
@@ -24,6 +24,14 @@
                 android:background="#5DAEA7"
                 android:textSize="30sp"
                 android:textStyle="bold"/>
+
+            <TextView
+                android:id="@+id/textView14"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="     DIA                          HORA                    MAT       PISTA"
+                android:textColor="#3F51B5"
+                android:textStyle="bold" />
 
             <ListView
                 android:id="@+id/lvMisPistas"

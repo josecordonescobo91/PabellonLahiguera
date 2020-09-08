@@ -8,28 +8,32 @@ import android.view.View;
 import android.widget.Button;
 import android.widget.TextView;
 
-public class Main_AlquilarPista_Activity extends AppCompatActivity {
+public class Main_MisAlquiler_Activity extends AppCompatActivity {
 
-    Button btnBicicletas, btnPistas;
+    Button  btnMisPistas, btnMisBicicletas;
     String usuario;
-    TextView tvPrueba;
+   // TextView tvPrueba;
+
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_main__alquilar_pista_);
-        tvPrueba = findViewById(R.id.tvPrueba);
+        setContentView(R.layout.activity_main__mis_alquiler_);
+
+        btnMisPistas=findViewById(R.id.btnMisPistas);
+        btnMisBicicletas=findViewById(R.id.btnMisBicicletas);
+       // tvPrueba = (TextView) findViewById(R.id.tvPrueba);
         Intent intent = getIntent();
         usuario = intent.getStringExtra("usuario");
-        tvPrueba.setText(usuario);
-        btnBicicletas=findViewById(R.id.btnBiclicletas);
-        btnPistas=findViewById(R.id.btnPistas);
+       // tvPrueba.setText("prueba");
+        //tvPrueba.setText(usuario);
 
 
-        btnBicicletas.setOnClickListener(new View.OnClickListener() {
+        btnMisPistas.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
 
-                Intent intent = new Intent(getApplicationContext(), Main_DiasBicicletas_Activity.class);
+                Intent intent = new Intent(getApplicationContext(), Main_MisPistas_Activity.class);
                 intent.putExtra("usuario", usuario);
                 startActivity(intent);
                 //   finish();
@@ -39,11 +43,11 @@ public class Main_AlquilarPista_Activity extends AppCompatActivity {
 
         });
 
-        btnPistas.setOnClickListener(new View.OnClickListener() {
+        btnMisBicicletas.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
 
-                Intent intent = new Intent(getApplicationContext(), Main_PistasAlquiler_Activity.class);
+                Intent intent = new Intent(getApplicationContext(), Main_MisBicicletas_Activity.class);
                 intent.putExtra("usuario", usuario);
                 startActivity(intent);
                 //   finish();
@@ -52,7 +56,7 @@ public class Main_AlquilarPista_Activity extends AppCompatActivity {
 
 
         });
+
+
     }
-
-
 }

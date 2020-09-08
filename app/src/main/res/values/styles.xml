@@ -8,4 +8,10 @@
         <item name="colorAccent">@color/colorAccent</item>
     </style>
 
+    <style name="ThemeSegundaActivity" parent="Theme.AppCompat.Light.DarkActionBar">
+        <item name="colorPrimary">#1976d2</item>
+        <item name="colorPrimaryDark">#FF5722</item> <!--Color naranja-->
+        <item name="colorAccent">@color/colorAccent</item>
+    </style>
+
 </resources>

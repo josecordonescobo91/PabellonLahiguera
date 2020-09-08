@@ -9,50 +9,62 @@
     tools:context=".Main_DiasBicicletas_Activity">
 
 
-    <Button
-        android:id="@+id/btnLunes"
-        android:onClick="Lunes"
-        android:text="LUNES"
-        tools:layout_editor_absoluteX="29dp"
-        tools:layout_editor_absoluteY="318dp"
+    <ScrollView
         android:layout_width="match_parent"
-        android:layout_height="35dp"
-        android:layout_marginLeft="15dp"
-        android:layout_marginTop="30dp"
-        android:layout_marginRight="15dp"
-        android:background="#1976d2"
-        android:textColor="#FFF"
-        android:textSize="14sp" />
+        android:layout_height="match_parent"
+        android:layout_marginTop="150dp">
 
-    <Button
-        android:id="@+id/btnMiercoles"
-        android:onClick="Miercoles"
-        android:text="MIERCOLES"
-        tools:layout_editor_absoluteX="29dp"
-        tools:layout_editor_absoluteY="318dp"
-        android:layout_width="match_parent"
-        android:layout_height="35dp"
-        android:layout_marginLeft="15dp"
-        android:layout_marginTop="30dp"
-        android:layout_marginRight="15dp"
-        android:background="#1976d2"
-        android:textColor="#FFF"
-        android:textSize="14sp"/>
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical" >
 
-    <Button
-        android:id="@+id/btnViernes"
-        android:layout_width="match_parent"
-        android:layout_height="35dp"
-        android:layout_marginLeft="15dp"
-        android:layout_marginTop="30dp"
-        android:layout_marginRight="15dp"
-        android:background="#1976d2"
-        android:onClick="Viernes"
-        android:text="VIERNES"
-        android:textColor="#FFF"
-        android:textSize="14sp"
-        tools:layout_editor_absoluteX="29dp"
-        tools:layout_editor_absoluteY="318dp" />
+            <Button
+                android:id="@+id/btnLunes"
+                android:layout_width="match_parent"
+                android:layout_height="35dp"
+                android:layout_marginLeft="15dp"
+                android:layout_marginTop="30dp"
+                android:layout_marginRight="15dp"
+                android:background="#1976d2"
+                android:onClick="Lunes"
+                android:text="LUNES"
+                android:textColor="#FFF"
+                android:textSize="14sp"
+                tools:layout_editor_absoluteX="29dp"
+                tools:layout_editor_absoluteY="318dp" />
+
+            <Button
+                android:id="@+id/btnMiercoles"
+                android:layout_width="match_parent"
+                android:layout_height="35dp"
+                android:layout_marginLeft="15dp"
+                android:layout_marginTop="30dp"
+                android:layout_marginRight="15dp"
+                android:background="#1976d2"
+                android:onClick="Miercoles"
+                android:text="MIERCOLES"
+                android:textColor="#FFF"
+                android:textSize="14sp"
+                tools:layout_editor_absoluteX="29dp"
+                tools:layout_editor_absoluteY="318dp" />
+
+            <Button
+                android:id="@+id/btnViernes"
+                android:layout_width="match_parent"
+                android:layout_height="35dp"
+                android:layout_marginLeft="15dp"
+                android:layout_marginTop="30dp"
+                android:layout_marginRight="15dp"
+                android:background="#1976d2"
+                android:onClick="Viernes"
+                android:text="VIERNES"
+                android:textColor="#FFF"
+                android:textSize="14sp"
+                tools:layout_editor_absoluteX="29dp"
+                tools:layout_editor_absoluteY="318dp" />
+        </LinearLayout>
+    </ScrollView>
 
 </LinearLayout>
 

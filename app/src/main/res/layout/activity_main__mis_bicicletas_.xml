@@ -4,7 +4,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".Main_AlquilarBicicleta_Activity">
+    tools:context=".Main_MisBicicletas_Activity">
 
     <ScrollView
         android:layout_width="match_parent"
@@ -19,26 +19,35 @@
                 android:id="@+id/tvTitulo"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:background="#5DAEA7"
                 android:gravity="center"
-                android:text="BICICLETAS LIBRES"
+                android:text="MIS BICICLETAS"
+                android:background="#5DAEA7"
                 android:textSize="30sp"
-                android:textStyle="bold" />
+                android:textStyle="bold"/>
 
             <TextView
-                android:id="@+id/tvPrueba"
-                android:layout_width="wrap_content"
+                android:id="@+id/tvIDPERSONA"
+                android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:text="TextView"
                 android:visibility="invisible"
                 tools:visibility="invisible" />
 
+            <TextView
+                android:id="@+id/textView15"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="                        BICICLETA                      DIA"
+                android:textColor="#3F51B5"
+                android:textSize="14sp"
+                android:textStyle="bold" />
+
             <ListView
                 android:id="@+id/lvMisBicicletas"
-                android:layout_width="wrap_content"
-                android:layout_height="521dp" >
+                android:layout_width="match_parent"
+                android:layout_height="452dp" />
 
-            </ListView>
         </LinearLayout>
     </ScrollView>
+
 </LinearLayout>

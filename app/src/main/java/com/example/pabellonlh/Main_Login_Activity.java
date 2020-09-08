@@ -46,7 +46,7 @@ public class Main_Login_Activity extends AppCompatActivity {
                 usuario = edtNick.getText().toString();
                 password = edtPass.getText().toString();
                 if(!usuario.isEmpty() && !password.isEmpty()){
-                    validarUsuario("http://jose-cordones.es/app/validar_usuario.php");
+                    validarUsuario("http://jose-cordones.es/app/validaciones/validar_usuario.php");
                 }else{
                     Toast.makeText(Main_Login_Activity.this, "No se permiten campos sin rellenar", Toast.LENGTH_SHORT).show();
                 }

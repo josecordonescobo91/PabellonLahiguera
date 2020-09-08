@@ -16,64 +16,64 @@
         <Button
             android:id="@+id/btnIrInicio"
             android:layout_width="match_parent"
-            android:layout_height="wrap_content"
+            android:layout_height="35dp"
             android:layout_marginLeft="15dp"
             android:layout_marginTop="30dp"
             android:layout_marginRight="15dp"
             android:background="#1976d2"
-            android:onClick="IrInicio"
-            android:text="INICIO"
             android:textColor="#FFF"
-            android:textSize="18sp" />
+            android:textSize="14sp"
+            android:onClick="IrInicio"
+            android:text="INICIO" />
 
         <Button
-            android:id="@+id/btnMisPistas"
+            android:id="@+id/btnMisAlquiler"
             android:layout_width="match_parent"
-            android:layout_height="wrap_content"
+            android:layout_height="35dp"
             android:layout_marginLeft="15dp"
             android:layout_marginTop="30dp"
             android:layout_marginRight="15dp"
             android:background="#1976d2"
-            android:text="MIS PISTAS"
+            android:text="MIS ALQUILER"
             android:textColor="#FFF"
-            android:textSize="18sp" />
+            android:textSize="14sp" />
 
         <Button
             android:id="@+id/btnAlquilar"
             android:layout_width="match_parent"
-            android:layout_height="wrap_content"
+            android:layout_height="35dp"
             android:layout_marginLeft="15dp"
             android:layout_marginTop="30dp"
             android:layout_marginRight="15dp"
             android:background="#1976d2"
-            android:onClick="AlquilarPista"
-            android:text="ALQUILAR"
             android:textColor="#FFF"
-            android:textSize="18sp" />
+            android:textSize="14sp"
+            android:onClick="AlquilarPista"
+            android:text="ALQUILAR" />
 
         <Button
             android:id="@+id/btnEditarme"
             android:layout_width="match_parent"
-            android:layout_height="wrap_content"
+            android:layout_height="35dp"
             android:layout_marginLeft="15dp"
             android:layout_marginTop="30dp"
             android:layout_marginRight="15dp"
             android:background="#1976d2"
-            android:text="EDITAR MIS DATOS"
             android:textColor="#FFF"
-            android:textSize="18sp" />
+            android:textSize="14sp"
+            android:text="EDITAR MIS DATOS" />
 
         <Button
             android:id="@+id/btnCerrarSesion"
             android:layout_width="match_parent"
-            android:layout_height="wrap_content"
+            android:layout_height="35dp"
             android:layout_marginLeft="15dp"
             android:layout_marginTop="30dp"
             android:layout_marginRight="15dp"
             android:background="#1976d2"
-            android:text="Cerrar Sesion"
             android:textColor="#FFF"
-            android:textSize="18sp" />
+            android:textSize="14sp"
+            android:text="Cerrar Sesion" />
 
         <TextView
             android:id="@+id/tvNombre"

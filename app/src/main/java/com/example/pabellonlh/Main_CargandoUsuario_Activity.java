@@ -19,7 +19,6 @@ public class Main_CargandoUsuario_Activity extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main__cargando_usuario_);
-
         progressBar=findViewById(R.id.progressBar);
 
         progressBar.setVisibility(View.VISIBLE);

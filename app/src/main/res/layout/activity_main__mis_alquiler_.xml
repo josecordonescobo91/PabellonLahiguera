@@ -1,108 +1,82 @@
 <?xml version="1.0" encoding="utf-8"?>
-<LinearLayout
-    xmlns:android="http://schemas.android.com/apk/res/android"
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
-    android:background="@drawable/cesped"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-
-    tools:context=".MainActivity">
+    android:background="@drawable/cesped"
+    tools:context=".Main_MisAlquiler_Activity">
 
     <ScrollView
-        android:id="@+id/scrollView2"
         android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        android:layout_marginTop="100dp"
-        tools:layout_editor_absoluteX="0dp"
-        tools:layout_editor_absoluteY="0dp">
+        android:layout_height="match_parent">
 
         <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:orientation="vertical">
-
-
+            android:layout_marginTop="140dp"
+            android:orientation="vertical" >
 
             <Button
-                android:id="@+id/btRegistrate"
+                android:id="@+id/btnMisPistas"
+                android:text="MIS PISTAS"
+                android:textColor="#FFF"
+                android:textSize="14sp"
+                android:layout_width="match_parent"
+                android:layout_height="35dp"
+                android:layout_marginLeft="15dp"
+                android:layout_marginTop="30dp"
+                android:layout_marginRight="15dp"
+                android:background="#1976d2"/>
+
+            <Button
+                android:id="@+id/btnMisBicicletas"
+                android:text="MIS BICICLETAS"
+                android:textColor="#FFF"
+                android:textSize="14sp"
+                android:layout_width="match_parent"
+                android:layout_height="35dp"
+                android:layout_marginLeft="15dp"
+                android:layout_marginTop="30dp"
+                android:layout_marginRight="15dp"
+                android:background="#1976d2"/>
+
+            <Button
+                android:id="@+id/btnZumba"
                 android:layout_width="match_parent"
                 android:layout_height="35dp"
                 android:layout_marginLeft="15dp"
                 android:layout_marginTop="30dp"
                 android:layout_marginRight="15dp"
                 android:background="#1976d2"
-                android:onClick="RegistroUsuaruio"
-                android:text="REGISTRATE"
+                android:text="MI ZUMBA"
                 android:textColor="#FFF"
                 android:textSize="14sp" />
 
-
             <Button
+                android:id="@+id/btnClofit"
                 android:layout_width="match_parent"
                 android:layout_height="35dp"
                 android:layout_marginLeft="15dp"
                 android:layout_marginTop="30dp"
                 android:layout_marginRight="15dp"
                 android:background="#1976d2"
-                android:onClick="Login"
-                android:text="USUARIO"
+                android:text="MI CLOFIT"
                 android:textColor="#FFF"
                 android:textSize="14sp" />
 
             <Button
-                android:id="@+id/btnHorario"
+                android:id="@+id/btnPilates"
                 android:layout_width="match_parent"
                 android:layout_height="35dp"
                 android:layout_marginLeft="15dp"
                 android:layout_marginTop="30dp"
                 android:layout_marginRight="15dp"
                 android:background="#1976d2"
-                android:onClick="Horario"
-                android:text="HORARIO"
+                android:text="PILATES"
                 android:textColor="#FFF"
                 android:textSize="14sp" />
-
-            <Button
-                android:id="@+id/btPrecios"
-                android:layout_width="match_parent"
-                android:layout_height="35dp"
-                android:layout_marginLeft="15dp"
-                android:layout_marginTop="30dp"
-                android:layout_marginRight="15dp"
-                android:background="#1976d2"
-                android:onClick="Precios"
-                android:text="PRECIOS"
-                android:textColor="#FFF"
-                android:textSize="14sp" />
-
-            <Button
-                android:id="@+id/btPistasAlquiladas"
-                android:layout_width="match_parent"
-                android:layout_height="35dp"
-                android:layout_marginLeft="15dp"
-                android:layout_marginTop="30dp"
-                android:layout_marginRight="15dp"
-                android:background="#1976d2"
-                android:text="ALQUILE DE HOY"
-                android:textColor="#FFF"
-                android:textSize="14sp" />
-
-            <Button
-                android:id="@+id/btAdministrador"
-                android:layout_width="match_parent"
-                android:layout_height="35dp"
-                android:layout_marginLeft="15dp"
-                android:layout_marginTop="30dp"
-                android:layout_marginRight="15dp"
-                android:background="#1976d2"
-                android:text="ADMINISTRADOR"
-                android:textColor="#FFF"
-                android:textSize="14sp" />
-
-
 
         </LinearLayout>
     </ScrollView>
-
 </LinearLayout>

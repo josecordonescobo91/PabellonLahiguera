@@ -43,7 +43,7 @@ public class Main_AlquilarBicicleta_Activity extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main__alquilar_bicicleta_);
-       tvPrueba = findViewById(R.id.tvPrueba);
+        tvPrueba = findViewById(R.id.tvPrueba);
         lvMisBicicletas = (ListView) findViewById(R.id.lvMisBicicletas);
         cliente = new AsyncHttpClient ();
         Intent intent = getIntent();

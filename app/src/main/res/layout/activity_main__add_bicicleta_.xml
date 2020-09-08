@@ -13,7 +13,7 @@
         <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:layout_marginVertical="50dp"
+            android:layout_marginVertical="100dp"
             android:orientation="vertical" >
 
             <TextView
@@ -101,16 +101,45 @@
                 android:text="ALQUILAR" />
 
             <TextView
+                android:id="@+id/tvRespo"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="TextView"
+                android:visibility="invisible"
+                tools:visibility="invisible" />
+
+            <TextView
                 android:id="@+id/tvIDPERSONA"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:text="TextView" />
+                android:text="TextView"
+                android:visibility="invisible"
+                tools:visibility="invisible" />
 
             <TextView
                 android:id="@+id/tvIDBICI"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:text="TextView" />
+                android:text="TextView"
+                android:visibility="invisible"
+                tools:visibility="invisible" />
+
+            <TextView
+                android:id="@+id/tvPrueba"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="TextView"
+                android:visibility="invisible"
+                tools:visibility="invisible" />
+
+            <TextView
+                android:id="@+id/tvContador"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="TextView"
+                android:visibility="invisible"
+                tools:visibility="invisible" />
+
         </LinearLayout>
     </ScrollView>
 </LinearLayout>

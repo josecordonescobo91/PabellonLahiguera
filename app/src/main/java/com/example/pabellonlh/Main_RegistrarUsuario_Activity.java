@@ -26,7 +26,7 @@ public class Main_RegistrarUsuario_Activity extends AppCompatActivity {
 
     EditText nick, pass, nombre, apellido1, apellido2, telefono, email, direccion, localidad, provincia;
     Button btAgregar;
-    String usuario;
+    String usuario, con;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -48,7 +48,8 @@ public class Main_RegistrarUsuario_Activity extends AppCompatActivity {
             @Override
             public void onClick(View v) {
                 usuario = nick.getText().toString();
-                if(!usuario.isEmpty() ){
+                con = pass.getText().toString();
+                if(!usuario.isEmpty() || !con.isEmpty()){
                     if (!validarEmail(email.getText().toString())){
                         Toast.makeText(Main_RegistrarUsuario_Activity.this, "EL CORREO NO ES CORRECTO", Toast.LENGTH_SHORT).show();
                         email.setText("");
@@ -57,7 +58,7 @@ public class Main_RegistrarUsuario_Activity extends AppCompatActivity {
                     }
 
                 }else{
-                    Toast.makeText(Main_RegistrarUsuario_Activity.this, "No se permiten nick sin rellenar", Toast.LENGTH_SHORT).show();
+                    Toast.makeText(Main_RegistrarUsuario_Activity.this, "NO SE PERMITE NICK O CONTRASEÑA SIN RELLENAR", Toast.LENGTH_SHORT).show();
                 }
 
             }
@@ -74,7 +75,7 @@ public class Main_RegistrarUsuario_Activity extends AppCompatActivity {
                     Toast.makeText(Main_RegistrarUsuario_Activity.this, "EL USUARIO YA EXISTE", Toast.LENGTH_SHORT).show();
                     nick.setText("");
                 }else{
-                    ejecutarServicio("http://jose-cordones.es/app/registrar_usuario.php");
+                    ejecutarServicio("http://jose-cordones.es/app/registros/registrar_usuario.php");
                 }
 
             }
@@ -88,6 +89,7 @@ public class Main_RegistrarUsuario_Activity extends AppCompatActivity {
             protected Map<String, String> getParams() throws AuthFailureError {
                 Map<String,String> parametros = new HashMap<String, String>();
                 parametros.put("nick", usuario);
+            //    Toast.makeText(Main_RegistrarUsuario_Activity.this, "biiien " +usuario, Toast.LENGTH_SHORT).show();
 
                 return parametros;
             }
@@ -102,7 +104,9 @@ public class Main_RegistrarUsuario_Activity extends AppCompatActivity {
 
             @Override
             public void onResponse(String response) {
+                Intent intent = new Intent(Main_RegistrarUsuario_Activity.this, MainActivity.class);
                 Toast.makeText(getApplicationContext(), "REGISTRO CORRECTO", Toast.LENGTH_SHORT).show();
+                startActivity(intent);
             }
         },new Response.ErrorListener(){
             @Override

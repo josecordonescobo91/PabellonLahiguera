@@ -22,7 +22,7 @@
                 android:orientation="vertical">
 
                 <TextView
-                    android:id="@+id/textView"
+                    android:id="@+id/tvTitulo"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:gravity="center"
@@ -35,7 +35,6 @@
                     android:id="@+id/lvDatos"
                     android:layout_width="match_parent"
                     android:layout_height="661dp"
-                    android:background="#8EE890"
                     android:fadingEdge="horizontal"
                     android:footerDividersEnabled="true"
                     android:headerDividersEnabled="true"

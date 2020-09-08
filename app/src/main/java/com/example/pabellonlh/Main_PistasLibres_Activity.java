@@ -4,53 +4,65 @@ import androidx.appcompat.app.AppCompatActivity;
 
 import android.content.Intent;
 import android.os.Bundle;
+import android.os.Handler;
 import android.util.Log;
 import android.view.View;
 import android.widget.AdapterView;
 import android.widget.ArrayAdapter;
 import android.widget.ListView;
 import android.widget.TextView;
-import android.widget.Toast;
 
-import com.android.volley.AuthFailureError;
 import com.android.volley.Request;
 import com.android.volley.RequestQueue;
 import com.android.volley.Response;
 import com.android.volley.VolleyError;
 import com.android.volley.toolbox.StringRequest;
 import com.android.volley.toolbox.Volley;
-import com.loopj.android.http.AsyncHttpClient;
 
 import org.json.JSONArray;
 import org.json.JSONException;
 
 import java.util.ArrayList;
-import java.util.HashMap;
-import java.util.Map;
 
-public class Main_MisPistas_Activity extends AppCompatActivity {
-
-    ListView lvMisPistas;
-    TextView tvNombre;
-
-    private AsyncHttpClient cliente;
+public class Main_PistasLibres_Activity extends AppCompatActivity {
+    ListView lvPistasLibres;
+    String usuario, pista;
+   // TextView tvUsuario, tvPista;
+    Handler handler = new Handler();
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_main__mis_pistas_);
-        lvMisPistas = (ListView) findViewById(R.id.lvMisPistas);
-        cliente = new AsyncHttpClient ();
+        setContentView(R.layout.activity_main__pistas_libres_);
+
+        lvPistasLibres = (ListView) findViewById(R.id.lvPistasLibres);
+        //tvUsuario = findViewById(R.id.tvUsuario);
+        //tvPista = findViewById(R.id.tvPista);
         Intent intent = getIntent();
-        String usuario = intent.getStringExtra("usuario");
-        intent.putExtra("usuario", usuario);
-        EnviarRecibirDatos("http://jose-cordones.es/app/consultas/obtenerMisPistas.php?nick="+usuario);
+        usuario = intent.getStringExtra("usuario");
+        pista = intent.getStringExtra("pista");
+       // tvUsuario.setText(usuario);
+        //tvPista.setText(pista);
+        PistasLibres("http://jose-cordones.es/app/consultas/obtenerPistasLibres.php?pista="+pista);
+        ejecutarTarea();
+    }
+
+    private final int TIEMPO = 2000;
+
+    public void ejecutarTarea() {
+        handler.postDelayed(new Runnable() {
+            public void run() {
+                Intent intent = getIntent();
+                String pista = intent.getStringExtra("pista");
+                PistasLibres("http://jose-cordones.es/app/consultas/obtenerPistasLibres.php?pista="+pista);
+
+                handler.postDelayed(this, TIEMPO);
+            }
+
+        }, TIEMPO);
 
     }
 
-
-
-
-    public void EnviarRecibirDatos(String URL){
+    public void PistasLibres(String URL){
 
 
         RequestQueue queue = Volley.newRequestQueue(this);
@@ -61,20 +73,16 @@ public class Main_MisPistas_Activity extends AppCompatActivity {
                 response = response.replace("][",",");
                 if (response.length()>0){
                     try {
-
                         JSONArray ja = new JSONArray(response);
-
                         Log.i("sizejson",""+ja.length());
-
                         Intent intent = getIntent();
                         String usuario = intent.getStringExtra("usuario");
-                        CargarListView(ja, usuario);
+                        String pista = intent.getStringExtra("pista");
+                        CargarListView(ja, usuario, pista);
                     } catch (JSONException e) {
                         e.printStackTrace();
                     }
 
-                }else{
-                    Toast.makeText(Main_MisPistas_Activity.this, "No hay pistas ", Toast.LENGTH_SHORT).show();
                 }
 
 
@@ -90,17 +98,16 @@ public class Main_MisPistas_Activity extends AppCompatActivity {
 
     }
 
-    public void CargarListView(JSONArray ja, final String usuario){
+    public void CargarListView(JSONArray ja, final String usuario, final String dia) {
 
         final ArrayList<String> lista = new ArrayList<>();
-        final ArrayList<String> idPista = new ArrayList<>();
-     //   lista.add("\n"+"DIA                       " +"HORA               "+ "M        "+"PISTA");
+        //final ArrayList<String> idPista = new ArrayList<>();
+        //lista.add("\n"+"DIA                       " +"HORA               "+ "M        "+"PISTA");
 
-
-        for(int i=0;i<ja.length();i+=25){
+        for (int i = 0; i < ja.length(); i += 6) {
 
             try {
-                lista.add("\n"+ja.getString(i+3)+"        "+ja.getString(i+4)+"        "+ja.getString(i+10)+"        "+ja.getString(i+5));
+                lista.add("\n"+ ja.getString(i + 5) + "          "+ ja.getString(i + 4) + "          "+ ja.getString(i + 3));
 
             } catch (JSONException e) {
                 e.printStackTrace();
@@ -108,32 +115,25 @@ public class Main_MisPistas_Activity extends AppCompatActivity {
 
         }
 
-
         final ArrayAdapter<String> adaptador = new ArrayAdapter<String>(this, android.R.layout.simple_list_item_1, lista);
-        if(adaptador == null || adaptador.isEmpty())
-        {
-            Toast.makeText(Main_MisPistas_Activity.this, "No hay pistas ", Toast.LENGTH_SHORT).show();
-        }
 
-        lvMisPistas.setAdapter(adaptador);
+        lvPistasLibres.setAdapter(adaptador);
 
-
-        lvMisPistas.setOnItemClickListener(new AdapterView.OnItemClickListener() {
+        lvPistasLibres.setOnItemClickListener(new AdapterView.OnItemClickListener() {
 
             @Override
             public void onItemClick(AdapterView<?> parent, View view, int position, long id) {
-                Intent intent = new Intent(Main_MisPistas_Activity.this, Main_EliminarEditar_MiPista_Activity.class);
-                //Toast.makeText(Main_MisPistas_Activity.this, lista.get(position)+"  "+usuario, Toast.LENGTH_SHORT).show();
+                Intent intent = new Intent(Main_PistasLibres_Activity.this, Main_AddPista_Activity.class);
+                String infopista = lista.get(position);
 
-               intent.putExtra("objetoData", lista.get(position));
+                intent.putExtra("objetoData", infopista + "          " + usuario + "          " + pista);
 
                 startActivity(intent);
 
             }
+
+
         });
-
-
-
     }
 
 }
