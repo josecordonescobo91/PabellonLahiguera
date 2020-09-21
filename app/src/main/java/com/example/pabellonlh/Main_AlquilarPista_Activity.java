@@ -10,7 +10,7 @@ import android.widget.TextView;
 
 public class Main_AlquilarPista_Activity extends AppCompatActivity {
 
-    Button btnBicicletas, btnPistas;
+    Button btnBicicletas, btnPistas, btnActividades;
     String usuario;
     TextView tvPrueba;
     @Override
@@ -23,6 +23,8 @@ public class Main_AlquilarPista_Activity extends AppCompatActivity {
         tvPrueba.setText(usuario);
         btnBicicletas=findViewById(R.id.btnBiclicletas);
         btnPistas=findViewById(R.id.btnPistas);
+        btnActividades=findViewById(R.id.btnActividades);
+
 
 
         btnBicicletas.setOnClickListener(new View.OnClickListener() {
@@ -52,6 +54,21 @@ public class Main_AlquilarPista_Activity extends AppCompatActivity {
 
 
         });
+
+        btnActividades.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+
+                Intent intent = new Intent(getApplicationContext(), Main_AlquilarActividades_Activity.class);
+                intent.putExtra("usuario", usuario);
+                startActivity(intent);
+                //   finish();
+
+            }
+
+
+        });
+
     }
 
 

@@ -27,7 +27,7 @@
             android:text="INICIO" />
 
         <Button
-            android:id="@+id/btnMisAlquiler"
+            android:id="@+id/btnListados"
             android:layout_width="match_parent"
             android:layout_height="35dp"
             android:layout_marginLeft="15dp"
@@ -39,7 +39,7 @@
             android:textSize="14sp" />
 
         <Button
-            android:id="@+id/btnAlquilar"
+            android:id="@+id/btnBorrar"
             android:layout_width="match_parent"
             android:layout_height="35dp"
             android:layout_marginLeft="15dp"
@@ -52,7 +52,7 @@
             android:text="ALQUILAR" />
 
         <Button
-            android:id="@+id/btnEditarme"
+            android:id="@+id/btnEditarMisDatos"
             android:layout_width="match_parent"
             android:layout_height="35dp"
             android:layout_marginLeft="15dp"
@@ -76,7 +76,7 @@
             android:text="Cerrar Sesion" />
 
         <TextView
-            android:id="@+id/tvNombre"
+            android:id="@+id/tvNombre1"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:text="TextView"

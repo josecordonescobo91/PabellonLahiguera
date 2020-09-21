@@ -1,0 +1,589 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:tools="http://schemas.android.com/tools" android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        tools:context=".Main_Ediciones_Activity">
+
+        <TabHost
+            android:layout_width="fill_parent"
+            android:layout_height="fill_parent"
+            android:id="@+id/tabHost"
+            android:layout_alignParentTop="true"
+            android:layout_centerHorizontal="true">
+
+            <LinearLayout
+                android:layout_width="fill_parent"
+                android:layout_height="fill_parent"
+                android:orientation="vertical">
+
+                <TabWidget
+                    android:id="@android:id/tabs"
+                    android:layout_width="fill_parent"
+                    android:layout_height="56dp"
+                    android:scrollbarSize="10dp"></TabWidget>
+
+                <FrameLayout
+                    android:id="@android:id/tabcontent"
+                    android:layout_width="fill_parent"
+                    android:layout_height="fill_parent">
+
+                    <LinearLayout
+                        android:id="@+id/datos"
+                        android:layout_width="fill_parent"
+                        android:layout_height="614dp"
+                        android:orientation="vertical">
+
+                        <ScrollView
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:layout_marginTop="60dp">
+
+                            <LinearLayout
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:orientation="vertical">
+
+                                <TextView
+                                    android:id="@+id/tvSeparadorMD"
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:text="TextView"
+                                    android:visibility="invisible" />
+
+                                <TextView
+                                    android:id="@+id/tvTelefono"
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:gravity="center"
+                                    android:text="TELEFONO" />
+
+                                <EditText
+                                    android:id="@+id/edTelefono"
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:ems="10"
+                                    android:gravity="center"
+                                    android:inputType="phone" />
+
+                                <TextView
+                                    android:id="@+id/tvEmail"
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:gravity="center"
+                                    android:text="EMAIL" />
+
+                                <EditText
+                                    android:id="@+id/edEmail"
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:ems="10"
+                                    android:gravity="center"
+                                    android:inputType="textEmailAddress" />
+
+                                <TextView
+                                    android:id="@+id/tvDireccion"
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:gravity="center"
+                                    android:text="DIRECCION" />
+
+                                <EditText
+                                    android:id="@+id/edDireccion"
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:ems="10"
+                                    android:gravity="center"
+                                    android:inputType="textPersonName" />
+
+                                <TextView
+                                    android:id="@+id/tvLocalidad"
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:gravity="center"
+                                    android:text="LOCALIDAD" />
+
+                                <EditText
+                                    android:id="@+id/edLocalidad"
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:ems="10"
+                                    android:gravity="center"
+                                    android:inputType="textPersonName" />
+
+                                <TextView
+                                    android:id="@+id/tvProvincia"
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:gravity="center"
+                                    android:text="PROVINCIA" />
+
+                                <EditText
+                                    android:id="@+id/edProvincia"
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:ems="10"
+                                    android:gravity="center"
+                                    android:inputType="textPersonName" />
+
+                                <Button
+                                    android:id="@+id/btnEditarMD"
+                                    android:layout_width="match_parent"
+                                    android:layout_height="35dp"
+                                    android:layout_marginLeft="15dp"
+                                    android:layout_marginTop="5dp"
+                                    android:layout_marginRight="15dp"
+                                    android:background="#1976d2"
+                                    android:text="EDITAR"
+                                    android:textColor="#FFF"
+                                    android:textSize="14sp" />
+                            </LinearLayout>
+                        </ScrollView>
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:id="@+id/mañana"
+                        android:layout_width="fill_parent"
+                        android:layout_height="614dp"
+                        android:orientation="vertical">
+
+                        <ScrollView
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent">
+
+                            <LinearLayout
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:orientation="vertical">
+
+                                <TextView
+                                    android:id="@+id/tvSeparador"
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:text="TextView"
+                                    android:visibility="invisible" />
+
+                                <TextView
+                                    android:id="@+id/tvLunesM"
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:gravity="center"
+                                    android:text="LUNES" />
+
+                                <EditText
+                                    android:id="@+id/edLunesM"
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:ems="10"
+                                    android:gravity="center"
+                                    android:inputType="textPersonName" />
+
+                                <TextView
+                                    android:id="@+id/tvMartesM"
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:gravity="center"
+                                    android:text="MARTES" />
+
+                                <EditText
+                                    android:id="@+id/edMartesM"
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:ems="10"
+                                    android:gravity="center"
+                                    android:inputType="textPersonName" />
+
+                                <TextView
+                                    android:id="@+id/tvMiercolesM"
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:gravity="center"
+                                    android:text="MIERCOLES" />
+
+                                <EditText
+                                    android:id="@+id/edMiercolesM"
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:ems="10"
+                                    android:gravity="center"
+                                    android:inputType="textPersonName" />
+
+                                <TextView
+                                    android:id="@+id/tvJuevesM"
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:gravity="center"
+                                    android:text="JUEVES" />
+
+                                <EditText
+                                    android:id="@+id/edJuevesM"
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:ems="10"
+                                    android:gravity="center"
+                                    android:inputType="textPersonName" />
+
+                                <TextView
+                                    android:id="@+id/tvViernesM"
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:gravity="center"
+                                    android:text="VIERNES" />
+
+                                <EditText
+                                    android:id="@+id/edViernesM"
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:ems="10"
+                                    android:gravity="center"
+                                    android:inputType="textPersonName" />
+
+                                <TextView
+                                    android:id="@+id/tvSabadoM"
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:gravity="center"
+                                    android:text="SABADO" />
+
+                                <EditText
+                                    android:id="@+id/edSabadoM"
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:ems="10"
+                                    android:gravity="center"
+                                    android:inputType="textPersonName" />
+
+                                <TextView
+                                    android:id="@+id/tvDomingoM"
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:gravity="center"
+                                    android:text="DOMINGO" />
+
+                                <EditText
+                                    android:id="@+id/edDomingoM"
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:ems="10"
+                                    android:gravity="center"
+                                    android:inputType="textPersonName" />
+
+                                <Button
+                                    android:id="@+id/btnEditarHorarioM"
+                                    android:layout_width="match_parent"
+                                    android:layout_height="35dp"
+                                    android:layout_marginLeft="15dp"
+                                    android:layout_marginTop="5dp"
+                                    android:layout_marginRight="15dp"
+                                    android:background="#1976d2"
+                                    android:text="EDITAR"
+                                    android:textColor="#FFF"
+                                    android:textSize="14sp" />
+                            </LinearLayout>
+                        </ScrollView>
+
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:id="@+id/tarde"
+                        android:layout_width="fill_parent"
+                        android:layout_height="614dp"
+                        android:orientation="vertical" >
+
+                        <ScrollView
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent">
+
+                            <LinearLayout
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:orientation="vertical" >
+
+                                <TextView
+                                    android:id="@+id/tvSeparadorT"
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:text="TextView"
+                                    android:visibility="invisible" />
+
+                                <TextView
+                                    android:id="@+id/tvLunesT"
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:gravity="center"
+                                    android:text="LUNES" />
+
+                                <EditText
+                                    android:id="@+id/edLunesT"
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:ems="10"
+                                    android:gravity="center"
+                                    android:inputType="textPersonName" />
+
+                                <TextView
+                                    android:id="@+id/tvMartesT"
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:gravity="center"
+                                    android:text="MARTES" />
+
+                                <EditText
+                                    android:id="@+id/edMartesT"
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:ems="10"
+                                    android:gravity="center"
+                                    android:inputType="textPersonName" />
+
+                                <TextView
+                                    android:id="@+id/tvMiercolesT"
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:gravity="center"
+                                    android:text="MIERCOLES" />
+
+                                <EditText
+                                    android:id="@+id/edMiercolesT"
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:ems="10"
+                                    android:gravity="center"
+                                    android:inputType="textPersonName" />
+
+                                <TextView
+                                    android:id="@+id/tvJuevesT"
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:gravity="center"
+                                    android:text="JUEVES" />
+
+                                <EditText
+                                    android:id="@+id/edJuevesT"
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:ems="10"
+                                    android:gravity="center"
+                                    android:inputType="textPersonName" />
+
+                                <TextView
+                                    android:id="@+id/tvViernesT"
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:gravity="center"
+                                    android:text="VIERNES" />
+
+                                <EditText
+                                    android:id="@+id/edViernesT"
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:ems="10"
+                                    android:gravity="center"
+                                    android:inputType="textPersonName" />
+
+                                <TextView
+                                    android:id="@+id/tvSabadoT"
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:gravity="center"
+                                    android:text="SABADO" />
+
+                                <EditText
+                                    android:id="@+id/edSabadoT"
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:ems="10"
+                                    android:gravity="center"
+                                    android:inputType="textPersonName" />
+
+                                <TextView
+                                    android:id="@+id/tvDomingoT"
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:gravity="center"
+                                    android:text="DOMINGO" />
+
+                                <EditText
+                                    android:id="@+id/edDomingoT"
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:ems="10"
+                                    android:gravity="center"
+                                    android:inputType="textPersonName" />
+
+                                <Button
+                                    android:id="@+id/btnEditarHorarioT"
+                                    android:layout_width="match_parent"
+                                    android:layout_height="35dp"
+                                    android:layout_marginLeft="15dp"
+                                    android:layout_marginTop="5dp"
+                                    android:layout_marginRight="15dp"
+                                    android:background="#1976d2"
+                                    android:text="EDITAR"
+                                    android:textColor="#FFF"
+                                    android:textSize="14sp" />
+                            </LinearLayout>
+                        </ScrollView>
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:id="@+id/precios"
+                        android:layout_width="fill_parent"
+                        android:layout_height="614dp"
+                        android:orientation="vertical">
+
+                        <ScrollView
+                            android:layout_width="match_parent"
+                            android:layout_height="545dp">
+
+                            <LinearLayout
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+
+                                android:orientation="vertical">
+
+                                <TextView
+                                    android:id="@+id/tvSeparadorPrecios"
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:text="TextView"
+                                    android:visibility="invisible" />
+
+                                <TextView
+                                    android:id="@+id/tvFutvol7"
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:gravity="center"
+                                    android:text="FUTBOL 7" />
+
+                                <EditText
+                                    android:id="@+id/edFutbol7"
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:ems="10"
+                                    android:gravity="center"
+                                    android:inputType="textPersonName" />
+
+                                <TextView
+                                    android:id="@+id/tvFutbolSala"
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:gravity="center"
+                                    android:text="FUTBOL SALA" />
+
+                                <EditText
+                                    android:id="@+id/edFutbolSala"
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:ems="10"
+                                    android:gravity="center"
+                                    android:inputType="textPersonName" />
+
+                                <TextView
+                                    android:id="@+id/tvTennis"
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:gravity="center"
+                                    android:text="TENNIS" />
+
+                                <EditText
+                                    android:id="@+id/edTennis"
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:ems="10"
+                                    android:gravity="center"
+                                    android:inputType="textPersonName" />
+
+                                <TextView
+                                    android:id="@+id/tvPadel"
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:gravity="center"
+                                    android:text="PADEL" />
+
+                                <EditText
+                                    android:id="@+id/edPadel"
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:ems="10"
+                                    android:gravity="center"
+                                    android:inputType="textPersonName" />
+
+                                <TextView
+                                    android:id="@+id/tvSpinning"
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:gravity="center"
+                                    android:text="SPINNINGS" />
+
+                                <EditText
+                                    android:id="@+id/edSpinning"
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:ems="10"
+                                    android:gravity="center"
+                                    android:inputType="textPersonName" />
+
+                                <TextView
+                                    android:id="@+id/tvZumba"
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:gravity="center"
+                                    android:text="ZUMBA" />
+
+                                <EditText
+                                    android:id="@+id/edZumba"
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:ems="10"
+                                    android:gravity="center"
+                                    android:inputType="textPersonName" />
+
+                                <TextView
+                                    android:id="@+id/tvCloFit"
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:gravity="center"
+                                    android:text="CLOFIT" />
+
+                                <EditText
+                                    android:id="@+id/edClofit"
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:ems="10"
+                                    android:gravity="center"
+                                    android:inputType="textPersonName" />
+
+                                <TextView
+                                    android:id="@+id/tvPilates"
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:gravity="center"
+                                    android:text="PILATES" />
+
+                                <EditText
+                                    android:id="@+id/edPilates"
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:ems="10"
+                                    android:gravity="center"
+                                    android:inputType="textPersonName" />
+
+                                <Button
+                                    android:id="@+id/btnEditarPrecios"
+                                    android:layout_width="match_parent"
+                                    android:layout_height="35dp"
+                                    android:layout_marginLeft="15dp"
+                                    android:layout_marginTop="5dp"
+                                    android:layout_marginRight="15dp"
+                                    android:background="#1976d2"
+                                    android:text="EDITAR"
+                                    android:textColor="#FFF"
+                                    android:textSize="14sp" />
+                            </LinearLayout>
+                        </ScrollView>
+                    </LinearLayout>
+
+                </FrameLayout>
+            </LinearLayout>
+        </TabHost>
+    </RelativeLayout>
+

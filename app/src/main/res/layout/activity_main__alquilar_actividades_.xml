@@ -1,0 +1,329 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:tools="http://schemas.android.com/tools" android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        tools:context=".Main_AlquilarActividades_Activity">
+
+        <TabHost
+            android:layout_width="fill_parent"
+            android:layout_height="fill_parent"
+            android:id="@+id/tabHost"
+            android:layout_alignParentTop="true"
+            android:layout_centerHorizontal="true">
+
+            <LinearLayout
+                android:layout_width="fill_parent"
+                android:layout_height="fill_parent"
+                android:orientation="vertical">
+
+                <TabWidget
+                    android:id="@android:id/tabs"
+                    android:layout_width="fill_parent"
+                    android:layout_height="56dp"></TabWidget>
+
+                <FrameLayout
+                    android:id="@android:id/tabcontent"
+                    android:layout_width="fill_parent"
+                    android:layout_height="fill_parent">
+
+                    <LinearLayout
+                        android:id="@+id/ZUMBA"
+                        android:layout_width="fill_parent"
+                        android:layout_height="614dp"
+                        android:orientation="vertical">
+
+                        <ScrollView
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:layout_marginTop="100dp"
+                            tools:layout_editor_absoluteX="0dp"
+                            tools:layout_editor_absoluteY="0dp">
+
+                            <LinearLayout
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:orientation="vertical">
+
+                                <TextView
+                                    android:id="@+id/tvNick"
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:gravity="center"
+                                    android:text="USUARIO"
+                                    android:textSize="24sp"
+                                    android:textStyle="bold" />
+
+                                <EditText
+                                    android:id="@+id/edNick"
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:ems="10"
+                                    android:enabled="false"
+                                    android:gravity="center"
+                                    android:text="Name" />
+
+                                <TextView
+                                    android:id="@+id/tvActividad"
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:gravity="center"
+                                    android:text="ACTIVIDAD"
+                                    android:textSize="24sp"
+                                    android:textStyle="bold" />
+
+                                <EditText
+                                    android:id="@+id/edActividad"
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:ems="10"
+                                    android:enabled="false"
+                                    android:gravity="center"
+                                    android:text="Name" />
+
+                                <TextView
+                                    android:id="@+id/tvDia"
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:gravity="center"
+                                    android:text="DIA"
+                                    android:textSize="24sp"
+                                    android:textStyle="bold" />
+
+                                <Spinner
+                                    android:id="@+id/spDia"
+                                    android:layout_width="115dp"
+                                    android:layout_height="wrap_content"
+                                    android:layout_marginLeft="150dp"
+                                    android:gravity="right"
+                                    android:padding="12dp"
+                                    android:textAlignment="gravity"
+                                    android:verticalScrollbarPosition="left" />
+
+                                <Button
+                                    android:id="@+id/btnBorrar"
+                                    android:layout_width="match_parent"
+                                    android:layout_height="35dp"
+                                    android:layout_marginLeft="15dp"
+                                    android:layout_marginTop="5dp"
+                                    android:layout_marginRight="15dp"
+                                    android:background="#1976d2"
+                                    android:text="ALQUILAR"
+                                    android:textColor="#FFF"
+                                    android:textSize="14sp" />
+
+                                <TextView
+                                    android:id="@+id/tvNombre1"
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:text="TextView"
+                                    android:visibility="invisible" />
+
+                                <TextView
+                                    android:id="@+id/tvIDPERSONA"
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:text="TextView"
+                                    android:visibility="invisible"
+                                    tools:visibility="invisible" />
+
+                            </LinearLayout>
+                        </ScrollView>
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:id="@+id/CLOFIT"
+                        android:layout_width="fill_parent"
+                        android:layout_height="614dp"
+                        android:orientation="vertical">
+
+                        <ScrollView
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:layout_marginTop="100dp"
+                            tools:layout_editor_absoluteX="0dp"
+                            tools:layout_editor_absoluteY="0dp">
+
+                            <LinearLayout
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:orientation="vertical">
+
+                                <TextView
+                                    android:id="@+id/tvUsuario2"
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:gravity="center"
+                                    android:text="USUARIO"
+                                    android:textSize="24sp"
+                                    android:textStyle="bold" />
+
+                                <EditText
+                                    android:id="@+id/edUsuario2"
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:ems="10"
+                                    android:enabled="false"
+                                    android:gravity="center"
+                                    android:text="Name" />
+
+                                <TextView
+                                    android:id="@+id/tvActividad2"
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:gravity="center"
+                                    android:text="ACTIVIDAD"
+                                    android:textSize="24sp"
+                                    android:textStyle="bold" />
+
+                                <EditText
+                                    android:id="@+id/edActividad2"
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:ems="10"
+                                    android:enabled="false"
+                                    android:gravity="center"
+                                    android:text="Name" />
+
+                                <TextView
+                                    android:id="@+id/tvDia2"
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:gravity="center"
+                                    android:text="DIA"
+                                    android:textSize="24sp"
+                                    android:textStyle="bold" />
+
+                                <Spinner
+                                    android:id="@+id/spDia2"
+                                    android:layout_width="115dp"
+                                    android:layout_height="wrap_content"
+                                    android:layout_marginLeft="150dp"
+                                    android:gravity="right"
+                                    android:padding="12dp"
+                                    android:textAlignment="gravity"
+                                    android:verticalScrollbarPosition="left" />
+
+                                <Button
+                                    android:id="@+id/btnBorrarCrear2"
+                                    android:layout_width="match_parent"
+                                    android:layout_height="35dp"
+                                    android:layout_marginLeft="15dp"
+                                    android:layout_marginTop="5dp"
+                                    android:layout_marginRight="15dp"
+                                    android:background="#1976d2"
+                                    android:text="ALQUILAR"
+                                    android:textColor="#FFF"
+                                    android:textSize="14sp" />
+
+                                <TextView
+                                    android:id="@+id/tvIDPERSONA2"
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:text="TextView"
+                                    android:visibility="invisible"
+                                    tools:visibility="invisible" />
+
+                            </LinearLayout>
+                        </ScrollView>
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:id="@+id/PILATES"
+                        android:layout_width="fill_parent"
+                        android:layout_height="614dp"
+                        android:orientation="vertical">
+
+                        <ScrollView
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:layout_marginTop="100dp"
+                            tools:layout_editor_absoluteX="0dp"
+                            tools:layout_editor_absoluteY="0dp">
+
+                            <LinearLayout
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:orientation="vertical" >
+
+                                <TextView
+                                    android:id="@+id/tvUsuario3"
+                                    android:text="USUARIO"
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:gravity="center"
+                                    android:textSize="24sp"
+                                    android:textStyle="bold"/>
+
+                                <EditText
+                                    android:id="@+id/edUsuario3"
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:ems="10"
+                                    android:enabled="false"
+                                    android:gravity="center"
+                                    android:text="Name" />
+
+                                <TextView
+                                    android:id="@+id/tvActividad3"
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:gravity="center"
+                                    android:textSize="24sp"
+                                    android:textStyle="bold"
+                                    android:text="ACTIVIDAD" />
+
+                                <EditText
+                                    android:id="@+id/edActividad3"
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:ems="10"
+                                    android:enabled="false"
+                                    android:gravity="center"
+                                    android:text="Name" />
+
+                                <TextView
+                                    android:id="@+id/tvDia3"
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:gravity="center"
+                                    android:textSize="24sp"
+                                    android:textStyle="bold"
+                                    android:text="DIA" />
+
+                                <Spinner
+                                    android:id="@+id/spDia3"
+                                    android:layout_width="115dp"
+                                    android:layout_height="wrap_content"
+                                    android:layout_marginLeft="150dp"
+                                    android:gravity="right"
+                                    android:padding="12dp"
+                                    android:textAlignment="gravity"
+                                    android:verticalScrollbarPosition="left" />
+
+                                <Button
+                                    android:id="@+id/btnBorrarCrear3"
+                                    android:layout_width="match_parent"
+                                    android:layout_height="35dp"
+                                    android:layout_marginLeft="15dp"
+                                    android:layout_marginTop="5dp"
+                                    android:layout_marginRight="15dp"
+                                    android:background="#1976d2"
+                                    android:text="ALQUILAR"
+                                    android:textColor="#FFF"
+                                    android:textSize="14sp" />
+
+                                <TextView
+                                    android:id="@+id/tvIDPERSONA3"
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:text="TextView"
+                                    android:visibility="invisible"
+                                    tools:visibility="invisible" />
+
+                            </LinearLayout>
+                        </ScrollView>
+                    </LinearLayout>
+                </FrameLayout>
+            </LinearLayout>
+        </TabHost>
+    </RelativeLayout>
+

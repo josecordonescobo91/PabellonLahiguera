@@ -11,7 +11,6 @@ import android.widget.AdapterView;
 import android.widget.ArrayAdapter;
 import android.widget.Button;
 import android.widget.EditText;
-import android.widget.ListView;
 import android.widget.Spinner;
 import android.widget.TextView;
 import android.widget.Toast;
@@ -26,7 +25,6 @@ import com.android.volley.toolbox.Volley;
 import org.json.JSONArray;
 import org.json.JSONException;
 
-import java.net.URL;
 import java.util.ArrayList;
 
 public class Main_EliminarEditar_MiPista_Activity extends AppCompatActivity {
@@ -50,8 +48,8 @@ public class Main_EliminarEditar_MiPista_Activity extends AppCompatActivity {
 
         edFecha = (EditText) findViewById(R.id.edFecha);
         edHora = (EditText) findViewById(R.id.edHora);
-        edPista = (EditText) findViewById(R.id.edPista);
-        snMaterial = (Spinner) findViewById(R.id.snMaterial);
+        edPista = (EditText) findViewById(R.id.edNombre);
+        snMaterial = (Spinner) findViewById(R.id.spDevuelo);
         spMate = (TextView) findViewById(R.id.spMate);
         btEliminar = (Button) findViewById(R.id.btEliminar);
         btEditar = (Button) findViewById(R.id.btEditar);
@@ -171,10 +169,10 @@ public class Main_EliminarEditar_MiPista_Activity extends AppCompatActivity {
 
 
                 EliminarPista("http://jose-cordones.es/app/eliminaciones/eliminarAlquiler.php?idalquiler="+ finalId);
-                Intent intent = new Intent(getApplicationContext(), Main_Inicio_Activity.class);
+                Intent intent = new Intent(getApplicationContext(), Main_MisAlquiler_Activity.class);
                 intent.putExtra("usuario", finalNick);
+                intent.setFlags(Intent.FLAG_ACTIVITY_CLEAR_TOP);
                 startActivity(intent);
-                finish();
                 Toast.makeText(getApplicationContext(), "PISTA ELIMINADA", Toast.LENGTH_SHORT).show();
 
             }
@@ -202,10 +200,10 @@ public class Main_EliminarEditar_MiPista_Activity extends AppCompatActivity {
 
                 String valorSpi = spMate.getText().toString();
                 ActualizarPistas("http://jose-cordones.es/app/actualizaciones/actualizarMiPista.php?material="+ valorSpi+"&id_info_posible_reserva="+ finalIdInformacion+"&idalquiler="+ finalId+"&idpersona="+ finalIdPersona+"&pagado="+ finalPagado+"&devuelto="+ finalDevuelto);
-                Intent intent = new Intent(getApplicationContext(), Main_Inicio_Activity.class);
+                Intent intent = new Intent(getApplicationContext(), Main_MisAlquiler_Activity.class);
                 intent.putExtra("usuario", finalNick);
+                intent.setFlags(Intent.FLAG_ACTIVITY_CLEAR_TOP);
                 startActivity(intent);
-                finish();
                 Toast.makeText(getApplicationContext(), "PISTA EDITADA", Toast.LENGTH_SHORT).show();
 
             }

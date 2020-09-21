@@ -84,7 +84,8 @@
                 android:layout_marginTop="30dp"
                 android:layout_marginRight="15dp"
                 android:background="#1976d2"
-                android:text="ALQUILE DE HOY"
+                android:onClick="AlquileresFuturos"
+                android:text="ALQUILER FUTUROS"
                 android:textColor="#FFF"
                 android:textSize="14sp" />
 
@@ -96,6 +97,7 @@
                 android:layout_marginTop="30dp"
                 android:layout_marginRight="15dp"
                 android:background="#1976d2"
+                android:onClick="LoginAdministrador"
                 android:text="ADMINISTRADOR"
                 android:textColor="#FFF"
                 android:textSize="14sp" />

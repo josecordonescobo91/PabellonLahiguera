@@ -1,47 +1,364 @@
-<?xml version="1.0" encoding="utf-8"?>
-<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
-    xmlns:app="http://schemas.android.com/apk/res-auto"
-    xmlns:tools="http://schemas.android.com/tools"
-    android:layout_width="match_parent"
-    android:layout_height="match_parent"
+
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:tools="http://schemas.android.com/tools" android:layout_width="match_parent"
+        android:layout_height="match_parent"
     tools:context=".Main_Horario_Activity">
 
-    <LinearLayout
-        android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        android:orientation="vertical">
-
-        <ScrollView
-            android:layout_width="match_parent"
-            android:layout_height="match_parent">
+        <TabHost
+            android:layout_width="fill_parent"
+            android:layout_height="fill_parent"
+            android:id="@+id/tabHost"
+            android:layout_alignParentTop="true"
+            android:layout_centerHorizontal="true">
 
             <LinearLayout
-                android:id="@+id/scHorario"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
+                android:layout_width="fill_parent"
+                android:layout_height="fill_parent"
                 android:orientation="vertical">
 
-                <TextView
-                    android:id="@+id/tvTitulo"
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:gravity="center"
-                    android:background="#5DAEA7"
-                    android:text="HORARIO"
-                    android:textSize="30sp"
-                    android:textStyle="bold" />
+                <TabWidget
+                    android:id="@android:id/tabs"
+                    android:layout_width="fill_parent"
+                    android:layout_height="56dp"></TabWidget>
 
-                <ListView
-                    android:id="@+id/lvDatos"
-                    android:layout_width="match_parent"
-                    android:layout_height="661dp"
-                    android:fadingEdge="horizontal"
-                    android:footerDividersEnabled="true"
-                    android:headerDividersEnabled="true"
-                    android:scrollbars="horizontal" />
+                <FrameLayout
+                    android:id="@android:id/tabcontent"
+                    android:layout_width="fill_parent"
+                    android:layout_height="fill_parent">
+
+                    <RelativeLayout
+                        android:id="@+id/HActividades"
+                        android:layout_width="fill_parent"
+                        android:layout_height="614dp"
+                        android:orientation="vertical">
+
+                        <TextView
+                            android:id="@+id/textView13"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:text="TextView"
+                            android:visibility="invisible"
+                            tools:visibility="invisible" />
+
+                        <ScrollView
+                            android:layout_width="match_parent"
+                            android:layout_height="528dp"
+                            android:layout_marginTop="50dp">
+
+                            <LinearLayout
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:orientation="vertical" >
+
+                                <TextView
+                                    android:id="@+id/INVIERNO"
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:gravity="center"
+                                    android:text="INVIERNO"
+                                    android:textSize="24sp"
+                                    android:textStyle="bold"
+                                    android:visibility="invisible" />
+
+                                <TextView
+                                    android:id="@+id/textView33"
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:text="                      LUNES"
+                                    android:textSize="20sp"
+                                    android:textStyle="bold" />
+
+                                <TextView
+                                    android:id="@+id/textView54"
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:text="                                 Zumba Infantil      18:00-19:00" />
+
+                                <TextView
+                                    android:id="@+id/textView55"
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:text="                                 Pilates                    19:00-20:00" />
+
+                                <TextView
+                                    android:id="@+id/textView44"
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:text="                                 Spinning                 20:00-21:00" />
+
+                                <TextView
+                                    android:id="@+id/textView64"
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:text="                                 Core                        21:00-21:30" />
+
+                                <TextView
+                                    android:id="@+id/textView34"
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:text="                      MARTES"
+                                    android:textSize="20sp"
+                                    android:textStyle="bold" />
+
+                                <TextView
+                                    android:id="@+id/textView45"
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:text="                                 Zumba                   10:00-11:00" />
+
+                                <TextView
+                                    android:id="@+id/textView56"
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:text="                                 CrossFit                19:30-20-30" />
+
+                                <TextView
+                                    android:id="@+id/textView65"
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:text="                                 Core                        21:00-21:30" />
+
+                                <TextView
+                                    android:id="@+id/textView35"
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:text="                      MIERCOLES"
+                                    android:textSize="20sp"
+                                    android:textStyle="bold" />
+
+                                <TextView
+                                    android:id="@+id/textView31"
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:text="                                 G.Mayor                10:00-11:00" />
+
+                                <TextView
+                                    android:id="@+id/textView38"
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:text="                                 Spinning Ini.         11:00-12:00" />
+
+                                <TextView
+                                    android:id="@+id/textView60"
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:text="                                 Zumba                  19:00-20:00" />
+
+                                <TextView
+                                    android:id="@+id/textView46"
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:text="                                 Spinning               20:00-21:00" />
+
+                                <TextView
+                                    android:id="@+id/textView66"
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:text="                                 Core                       21:00-21:30" />
+
+                                <TextView
+                                    android:id="@+id/textView36"
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:text="                      JUEVES"
+                                    android:textSize="20sp"
+                                    android:textStyle="bold" />
+
+                                <TextView
+                                    android:id="@+id/textView47"
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:text="                                 Zumba                  10:00-11:00" />
+
+                                <TextView
+                                    android:id="@+id/textView58"
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:text="                                 Pilates                  18:30-19:30" />
+
+                                <TextView
+                                    android:id="@+id/textView57"
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:text="                                 CrossFit               19:30-20:30" />
+
+                                <TextView
+                                    android:id="@+id/textView67"
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:text="                                 Core                       21:00-21:30" />
+
+                                <TextView
+                                    android:id="@+id/textView37"
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:text="                      VIERNES"
+                                    android:textSize="20sp"
+                                    android:textStyle="bold" />
+
+                                <TextView
+                                    android:id="@+id/textView61"
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:text="                                 G.Mayor                10:00-11:00" />
+
+                                <TextView
+                                    android:id="@+id/textView62"
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:text="                                 Spinning Ini.         11:00-12:00" />
+
+                                <TextView
+                                    android:id="@+id/textView63"
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:text="                                 Zumba Infantil     18:00-19:00" />
+
+                                <TextView
+                                    android:id="@+id/textView59"
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:text="                                 Zumba                  19:00-20:00" />
+
+                                <TextView
+                                    android:id="@+id/textView48"
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:text="                                 Spinning                20:00-21:00" />
+
+                                <TextView
+                                    android:id="@+id/textView68"
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:text="                                 Core                       21:00-21:30" />
+
+                                <TextView
+                                    android:id="@+id/VERANO"
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:gravity="center"
+                                    android:text="VERANO"
+                                    android:textSize="24sp"
+                                    android:textStyle="bold"
+                                    android:visibility="invisible" />
+
+                                <TextView
+                                    android:id="@+id/textView39"
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:text="LUNES"
+                                    android:textSize="20sp"
+                                    android:textStyle="bold"
+                                    android:visibility="invisible" />
+
+                                <TextView
+                                    android:id="@+id/textView49"
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:text="TextView"
+                                    android:visibility="invisible" />
+
+                                <TextView
+                                    android:id="@+id/textView40"
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:text="MARTES"
+                                    android:textSize="20sp"
+                                    android:textStyle="bold"
+                                    android:visibility="invisible" />
+
+                                <TextView
+                                    android:id="@+id/textView50"
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:text="TextView"
+                                    android:visibility="invisible" />
+
+                                <TextView
+                                    android:id="@+id/textView41"
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:text="MIERCOLES"
+                                    android:textSize="20sp"
+                                    android:textStyle="bold"
+                                    android:visibility="invisible" />
+
+                                <TextView
+                                    android:id="@+id/textView51"
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:text="TextView"
+                                    android:visibility="invisible" />
+
+                                <TextView
+                                    android:id="@+id/textView42"
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:text="JUEVES"
+                                    android:textSize="20sp"
+                                    android:textStyle="bold"
+                                    android:visibility="invisible" />
+
+                                <TextView
+                                    android:id="@+id/textView52"
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:text="TextView"
+                                    android:visibility="invisible" />
+
+                                <TextView
+                                    android:id="@+id/textView43"
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:text="VIERNES"
+                                    android:textSize="20sp"
+                                    android:textStyle="bold"
+                                    android:visibility="invisible" />
+
+                                <TextView
+                                    android:id="@+id/textView53"
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:text="TextView"
+                                    android:visibility="invisible" />
+                            </LinearLayout>
+                        </ScrollView>
+                    </RelativeLayout>
+
+                    <LinearLayout
+                        android:id="@+id/HPolideportivo"
+                        android:layout_width="fill_parent"
+                        android:layout_height="614dp"
+                        android:orientation="vertical">
+
+
+                        <TextView
+                            android:id="@+id/tvNombre1"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:text="TextView"
+                            android:visibility="invisible" />
+
+                        <ScrollView
+                            android:layout_width="match_parent"
+                            android:layout_height="528dp"
+                            android:layout_marginTop="50dp">
+
+                            <LinearLayout
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:orientation="vertical">
+
+                                <ListView
+                                    android:id="@+id/lvDatos"
+                                    android:layout_width="match_parent"
+                                    android:layout_height="521dp" />
+                            </LinearLayout>
+                        </ScrollView>
+                    </LinearLayout>
+
+                </FrameLayout>
             </LinearLayout>
-        </ScrollView>
+        </TabHost>
+    </RelativeLayout>
 
-    </LinearLayout>
-
-</androidx.constraintlayout.widget.ConstraintLayout>

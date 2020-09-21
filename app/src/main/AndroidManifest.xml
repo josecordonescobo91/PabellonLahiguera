@@ -16,7 +16,8 @@
         android:theme="@style/AppTheme"
         android:usesCleartextTraffic="true">
 
-        <activity android:name=".Main_CargandoUsuario_Activity"
+        <activity
+            android:name=".Main_CargandoUsuario_Activity"
             android:screenOrientation="nosensor">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
@@ -25,10 +26,136 @@
             </intent-filter>
         </activity>
 
-        <activity android:name=".Main_AddPista_Activity"
+        <activity
+            android:name=".Main_EditarMisDatosUsuario_Activity"
             android:screenOrientation="nosensor"
             android:theme="@style/ThemeSegundaActivity" />
-        <activity android:name=".Main_PistasLibres_Activity"
+        <activity
+            android:name=".Main_Ediciones_Activity"
+            android:screenOrientation="nosensor"
+            android:theme="@style/ThemeSegundaActivity" />
+        <activity
+            android:name=".Main_GestionZumba_Activity"
+            android:screenOrientation="nosensor"
+            android:theme="@style/ThemeSegundaActivity" />
+        <activity
+            android:name=".Main_EliminarZumbaAdministrador_Activity"
+            android:screenOrientation="nosensor"
+            android:theme="@style/ThemeSegundaActivity" />
+        <activity
+            android:name=".Main_GestionCrossFit_Activity"
+            android:screenOrientation="nosensor"
+            android:theme="@style/ThemeSegundaActivity" />
+        <activity
+            android:name=".Main_EliminarCloFitAdministrador_Activity"
+            android:screenOrientation="nosensor"
+            android:theme="@style/ThemeSegundaActivity" />
+        <activity
+            android:name=".Main_GestionPilates_Activity"
+            android:screenOrientation="nosensor"
+            android:theme="@style/ThemeSegundaActivity" />
+        <activity
+            android:name=".Main_EliminarPilatesAdministrador_Activity"
+            android:screenOrientation="nosensor"
+            android:theme="@style/ThemeSegundaActivity" />
+        <activity
+            android:name=".Main_GestionPistasFuturas_Activity"
+            android:screenOrientation="nosensor"
+            android:theme="@style/ThemeSegundaActivity" />
+        <activity
+            android:name=".Main_EditarEliminarPistasFuturas_Activity"
+            android:screenOrientation="nosensor"
+            android:theme="@style/ThemeSegundaActivity" />
+        <activity
+            android:name=".Main_GestionPistasHoy_Activity"
+            android:screenOrientation="nosensor"
+            android:theme="@style/ThemeSegundaActivity" />
+        <activity
+            android:name=".Main_EditarEliminarPistasHoy_Activity"
+            android:screenOrientation="nosensor"
+            android:theme="@style/ThemeSegundaActivity" />
+        <activity
+            android:name=".Main_GestionBicicletas_Activity"
+            android:screenOrientation="nosensor"
+            android:theme="@style/ThemeSegundaActivity" />
+        <activity
+            android:name=".Main_EliminarBicicletasAdministrador_Activity"
+            android:screenOrientation="nosensor"
+            android:theme="@style/ThemeSegundaActivity" />
+        <activity
+            android:name=".Main_AlquilerAdministrador_Activity"
+            android:screenOrientation="nosensor"
+            android:theme="@style/ThemeSegundaActivity" />
+        <activity
+            android:name=".Main_MomentoPistas_Activity"
+            android:screenOrientation="nosensor"
+            android:theme="@style/ThemeSegundaActivity" />
+        <activity
+            android:name=".Main_GestionPistasPasadas_Activity"
+            android:screenOrientation="nosensor"
+            android:theme="@style/ThemeSegundaActivity" />
+        <activity
+            android:name=".Main_EditarEliminarPistasPasadas_Activity"
+            android:screenOrientation="nosensor"
+            android:theme="@style/ThemeSegundaActivity" />
+        <activity
+            android:name=".Main_Usuarios_Activity"
+            android:screenOrientation="nosensor"
+            android:theme="@style/ThemeSegundaActivity" />
+        <activity
+            android:name=".Main_Administradores_Activity"
+            android:screenOrientation="nosensor"
+            android:theme="@style/ThemeSegundaActivity" />
+        <activity
+            android:name=".Main_Editar_Eliminar_Persona_Activity"
+            android:screenOrientation="nosensor"
+            android:theme="@style/ThemeSegundaActivity" />
+        <activity
+            android:name=".Main_AlquilarActividades_Activity"
+            android:screenOrientation="nosensor"
+            android:theme="@style/ThemeSegundaActivity" />
+        <activity
+            android:name=".Main_Pistas_Inicio_Activity"
+            android:screenOrientation="nosensor"
+            android:theme="@style/ThemeSegundaActivity" />
+        <activity
+            android:name=".Main_Zumba_Inicio_Activity"
+            android:screenOrientation="nosensor"
+            android:theme="@style/ThemeSegundaActivity" />
+        <activity
+            android:name=".Main_CrossFit_Inicio_Activity"
+            android:screenOrientation="nosensor"
+            android:theme="@style/ThemeSegundaActivity" />
+        <activity
+            android:name=".Main_Pilates_Inicio_Activity"
+            android:screenOrientation="nosensor"
+            android:theme="@style/ThemeSegundaActivity" />
+        <activity
+            android:name=".Main_LoginAdministrador_Activity"
+            android:screenOrientation="nosensor"
+            android:theme="@style/ThemeSegundaActivity" />
+        <activity
+            android:name=".Main_InicioAdministrador_Activity"
+            android:screenOrientation="nosensor"
+            android:theme="@style/ThemeSegundaActivity" />
+        <activity
+            android:name=".Main_Borrar_Crear_Activity"
+            android:screenOrientation="nosensor"
+            android:theme="@style/ThemeSegundaActivity" />
+        <activity
+            android:name=".Main_AlquilerFuturos_Inicio_Activity"
+            android:screenOrientation="nosensor"
+            android:theme="@style/ThemeSegundaActivity" />
+        <activity
+            android:name=".Main_DiasBicis_Inicio_Activity"
+            android:screenOrientation="nosensor"
+            android:theme="@style/ThemeSegundaActivity" />
+        <activity
+            android:name=".Main_EliminarActividad_Activity"
+            android:screenOrientation="nosensor"
+            android:theme="@style/ThemeSegundaActivity" />
+        <activity
+            android:name=".Main_AddPista_Activity"
             android:screenOrientation="nosensor"
             android:theme="@style/ThemeSegundaActivity" />
         <activity
@@ -37,10 +164,6 @@
             android:theme="@style/ThemeSegundaActivity" />
         <activity
             android:name=".Main_PistasAlquiler_Activity"
-            android:screenOrientation="nosensor"
-            android:theme="@style/ThemeSegundaActivity" />
-        <activity
-            android:name=".Main_MisBicicletas_Activity"
             android:screenOrientation="nosensor"
             android:theme="@style/ThemeSegundaActivity" />
         <activity
@@ -56,19 +179,11 @@
             android:screenOrientation="nosensor"
             android:theme="@style/ThemeSegundaActivity" />
         <activity
-            android:name=".Main_AlquilarBicicleta_Activity"
-            android:screenOrientation="nosensor"
-            android:theme="@style/ThemeSegundaActivity" />
-        <activity
             android:name=".Main_AlquilarPista_Activity"
             android:screenOrientation="nosensor"
             android:theme="@style/ThemeSegundaActivity" />
         <activity
             android:name=".Main_EliminarEditar_MiPista_Activity"
-            android:screenOrientation="nosensor"
-            android:theme="@style/ThemeSegundaActivity" />
-        <activity
-            android:name=".Main_MisPistas_Activity"
             android:screenOrientation="nosensor"
             android:theme="@style/ThemeSegundaActivity" />
         <activity

@@ -10,10 +10,6 @@ import android.widget.Toast;
 
 public class MainActivity extends AppCompatActivity {
 
-
-    Button login;
-    Button horario;
-    Button precios;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -25,6 +21,7 @@ public class MainActivity extends AppCompatActivity {
     public void Login (View view){
         Intent login = new Intent(this, Main_Login_Activity.class);
         startActivity(login);
+        finish();
     }
 
     public void Horario (View view){
@@ -41,5 +38,16 @@ public class MainActivity extends AppCompatActivity {
     public void RegistroUsuaruio (View view){
         Intent RegistroUsuario = new Intent(this, Main_RegistrarUsuario_Activity.class);
         startActivity(RegistroUsuario);
+    }
+
+    public void LoginAdministrador (View view){
+        Intent login = new Intent(this, Main_LoginAdministrador_Activity.class);
+        startActivity(login);
+        finish();
+    }
+
+    public void AlquileresFuturos (View view){
+        Intent login = new Intent(this, Main_AlquilerFuturos_Inicio_Activity.class);
+        startActivity(login);
     }
 }

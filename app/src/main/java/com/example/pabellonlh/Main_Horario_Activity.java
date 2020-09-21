@@ -7,6 +7,7 @@ import android.os.Bundle;
 import android.util.Log;
 import android.widget.ArrayAdapter;
 import android.widget.ListView;
+import android.widget.TabHost;
 import android.widget.TextView;
 import android.widget.Toast;
 
@@ -27,6 +28,7 @@ import cz.msebera.android.httpclient.Header;
 
 public class Main_Horario_Activity extends AppCompatActivity {
     ListView lvDatos;
+    TabHost TbH;
     private AsyncHttpClient cliente;
 
 
@@ -34,12 +36,28 @@ public class Main_Horario_Activity extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main__horario_);
-        Toast.makeText(Main_Horario_Activity.this, "HORARIO PABELLON LAHIGUERA", Toast.LENGTH_SHORT).show();
+       // Toast.makeText(Main_Horario_Activity.this, "HORARIO PABELLON LAHIGUERA", Toast.LENGTH_SHORT).show();
         lvDatos = (ListView) findViewById(R.id.lvDatos);
         cliente = new AsyncHttpClient ();
         String consulta = "http://jose-cordones.es/app/consultas/obtenerHorario.php";
         EnviarRecibirDatos(consulta);
         //obtenerHorario();
+
+        TbH = (TabHost) findViewById(R.id.tabHost); //llamamos al Tabhost
+        TbH.setup();                                                         //lo activamos
+
+        TabHost.TabSpec tab1 = TbH.newTabSpec("tab1");  //aspectos de cada Tab (pestaña)
+        TabHost.TabSpec tab2 = TbH.newTabSpec("tab2");
+
+        tab1.setIndicator("Horario Polideportivo");    //qué queremos que aparezca en las pestañas
+        tab1.setContent(R.id.HPolideportivo); //definimos el id de cada Tab (pestaña)
+
+
+        tab2.setIndicator("Horario Actividades");
+        tab2.setContent(R.id.HActividades);
+
+        TbH.addTab(tab1);
+        TbH.addTab(tab2);
 
     }
 

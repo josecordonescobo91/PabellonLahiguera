@@ -1,0 +1,314 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    tools:context=".Main_Borrar_Crear_Activity">
+
+        <TabHost
+            android:layout_width="fill_parent"
+            android:layout_height="fill_parent"
+            android:id="@+id/tabHost"
+            android:layout_alignParentTop="true"
+            android:layout_centerHorizontal="true">
+
+            <LinearLayout
+                android:layout_width="fill_parent"
+                android:layout_height="fill_parent"
+                android:orientation="vertical">
+
+                <TabWidget
+                    android:id="@android:id/tabs"
+                    style="@android:style/Widget.DeviceDefault.TabWidget"
+                    android:layout_width="fill_parent"
+                    android:layout_height="56dp"
+                    android:scrollbarDefaultDelayBeforeFade="500"
+                    android:scrollbarFadeDuration="200"
+                    android:scrollbarSize="10dp"></TabWidget>
+
+                <FrameLayout
+                    android:id="@android:id/tabcontent"
+                    android:layout_width="fill_parent"
+                    android:layout_height="fill_parent">
+
+                    <androidx.constraintlayout.widget.ConstraintLayout
+                        android:id="@+id/PISTA"
+                        android:layout_width="fill_parent"
+                        android:layout_height="614dp"
+                        android:textSize="2dp"
+                        android:orientation="vertical">
+
+
+                        <Button
+                            android:id="@+id/btnFecha"
+                            android:layout_width="140dp"
+                            android:layout_height="47dp"
+                            android:layout_marginEnd="28dp"
+                            android:layout_marginRight="28dp"
+                            android:text="CRAR PISTAS"
+                            app:layout_constraintBottom_toBottomOf="parent"
+                            app:layout_constraintEnd_toEndOf="parent"
+                            app:layout_constraintTop_toTopOf="parent"
+                            app:layout_constraintVertical_bias="0.245" />
+
+                        <ImageButton
+                            android:id="@+id/imgFecha"
+                            android:layout_width="47dp"
+                            android:layout_height="44dp"
+                            android:layout_marginEnd="12dp"
+                            android:layout_marginRight="12dp"
+                            app:layout_constraintBottom_toBottomOf="parent"
+                            app:layout_constraintEnd_toStartOf="@+id/btnFecha"
+                            app:layout_constraintTop_toTopOf="parent"
+                            app:layout_constraintVertical_bias="0.249"
+                            app:srcCompat="@android:drawable/ic_menu_my_calendar" />
+
+                        <EditText
+                            android:id="@+id/edFecha"
+                            android:layout_width="133dp"
+                            android:layout_height="41dp"
+                            android:ems="10"
+                            android:inputType="textPersonName"
+                            app:layout_constraintBottom_toBottomOf="parent"
+                            app:layout_constraintEnd_toStartOf="@+id/imgFecha"
+                            app:layout_constraintHorizontal_bias="0.578"
+                            app:layout_constraintStart_toStartOf="parent"
+                            app:layout_constraintTop_toTopOf="parent"
+                            app:layout_constraintVertical_bias="0.247" />
+
+
+                        <Button
+                            android:id="@+id/btnFecha1"
+                            android:layout_width="136dp"
+                            android:layout_height="46dp"
+                            android:layout_marginEnd="28dp"
+                            android:layout_marginRight="28dp"
+                            android:layout_marginBottom="336dp"
+                            android:text="BORRAR PISTAS"
+                            app:layout_constraintBottom_toBottomOf="parent"
+                            app:layout_constraintEnd_toEndOf="parent" />
+
+                        <ImageButton
+                            android:id="@+id/imgFecha1"
+                            android:layout_width="47dp"
+                            android:layout_height="44dp"
+                            android:layout_marginEnd="16dp"
+                            android:layout_marginRight="16dp"
+                            app:layout_constraintBottom_toBottomOf="parent"
+                            app:layout_constraintEnd_toStartOf="@+id/btnFecha1"
+                            app:layout_constraintTop_toTopOf="parent"
+                            app:layout_constraintVertical_bias="0.415"
+                            app:srcCompat="@android:drawable/ic_menu_my_calendar" />
+
+                        <EditText
+                            android:id="@+id/edFecha1"
+                            android:layout_width="133dp"
+                            android:layout_height="41dp"
+                            android:ems="10"
+                            android:inputType="textPersonName"
+                            app:layout_constraintBottom_toBottomOf="parent"
+                            app:layout_constraintEnd_toStartOf="@+id/imgFecha"
+                            app:layout_constraintHorizontal_bias="0.62"
+                            app:layout_constraintStart_toStartOf="parent"
+                            app:layout_constraintTop_toTopOf="parent"
+                            app:layout_constraintVertical_bias="0.413" />
+
+                        <Button
+                            android:id="@+id/btnEliminarPistas"
+                            android:layout_width="347dp"
+                            android:layout_height="38dp"
+                            android:layout_marginBottom="248dp"
+                            android:background="#1976d2"
+                            android:text="ELIMINAR PISTAS VACIAS"
+                            android:textColor="#FFF"
+                            android:textSize="14sp"
+                            app:layout_constraintBottom_toBottomOf="parent"
+                            app:layout_constraintEnd_toEndOf="parent"
+                            app:layout_constraintHorizontal_bias="0.562"
+                            app:layout_constraintStart_toStartOf="parent" />
+
+                    </androidx.constraintlayout.widget.ConstraintLayout>
+
+
+                    <LinearLayout
+                        android:id="@+id/BICI"
+                        android:layout_width="fill_parent"
+                        android:layout_height="300dp"
+                        android:textSize="2dp"
+                        android:gravity="center"
+                        android:orientation="vertical">
+
+                        <Button
+                            android:id="@+id/btnEliminarBicis"
+                            android:layout_width="match_parent"
+                            android:layout_height="35dp"
+                            android:layout_marginLeft="15dp"
+                            android:layout_marginTop="30dp"
+                            android:layout_marginRight="15dp"
+                            android:background="#1976d2"
+                            android:textColor="#FFF"
+                            android:textSize="14sp"
+                            android:text="LIBERAR BICICLETAS" />
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:id="@+id/ZUMBA"
+                        android:layout_width="fill_parent"
+                        android:layout_height="450dp"
+                        android:gravity="center"
+                        android:textSize="2dp"
+                        android:orientation="vertical">
+
+                        <Button
+                            android:id="@+id/btnEliminarLunes"
+                            android:layout_width="match_parent"
+                            android:layout_height="35dp"
+                            android:layout_marginLeft="15dp"
+                            android:layout_marginTop="30dp"
+                            android:layout_marginRight="15dp"
+                            android:background="#1976d2"
+                            android:textColor="#FFF"
+                            android:textSize="14sp"
+                            android:text="ELIMINAR LUNES" />
+
+                        <Button
+                            android:id="@+id/btnEliminarMartes"
+                            android:layout_width="match_parent"
+                            android:layout_height="35dp"
+                            android:layout_marginLeft="15dp"
+                            android:layout_marginTop="30dp"
+                            android:layout_marginRight="15dp"
+                            android:background="#1976d2"
+                            android:textColor="#FFF"
+                            android:textSize="14sp"
+                            android:text="ELIMINAR MARTES" />
+
+                        <Button
+                            android:id="@+id/btnEliminarJueves"
+                            android:layout_width="match_parent"
+                            android:layout_height="35dp"
+                            android:layout_marginLeft="15dp"
+                            android:layout_marginTop="30dp"
+                            android:layout_marginRight="15dp"
+                            android:background="#1976d2"
+                            android:textColor="#FFF"
+                            android:textSize="14sp"
+                            android:text="ELIMINAR JUEVES" />
+
+                        <Button
+                            android:id="@+id/btnEliminarViernes"
+                            android:layout_width="match_parent"
+                            android:layout_height="35dp"
+                            android:layout_marginLeft="15dp"
+                            android:layout_marginTop="30dp"
+                            android:layout_marginRight="15dp"
+                            android:background="#1976d2"
+                            android:textColor="#FFF"
+                            android:textSize="14sp"
+                            android:text="ELIMINAR VIERNES" />
+
+                        <Button
+                            android:id="@+id/btnEliminarTodos"
+                            android:layout_width="match_parent"
+                            android:layout_height="35dp"
+                            android:layout_marginLeft="15dp"
+                            android:layout_marginTop="30dp"
+                            android:layout_marginRight="15dp"
+                            android:background="#1976d2"
+                            android:textColor="#FFF"
+                            android:textSize="14sp"
+                            android:text="ELIMINAR TODOS" />
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:id="@+id/CLOFIT"
+                        android:layout_width="fill_parent"
+                        android:layout_height="475dp"
+                        android:gravity="center"
+                        android:textSize="2dp"
+                        android:orientation="vertical">
+
+                        <Button
+                            android:id="@+id/btnEliminarMartesClofit"
+                            android:layout_width="match_parent"
+                            android:layout_height="35dp"
+                            android:layout_marginLeft="15dp"
+                            android:layout_marginTop="30dp"
+                            android:layout_marginRight="15dp"
+                            android:background="#1976d2"
+                            android:textColor="#FFF"
+                            android:textSize="14sp"
+                            android:text="ELIMINAR MARTES" />
+
+                        <Button
+                            android:id="@+id/btnEliminarJuevesClofit"
+                            android:layout_width="match_parent"
+                            android:layout_height="35dp"
+                            android:layout_marginLeft="15dp"
+                            android:layout_marginTop="30dp"
+                            android:layout_marginRight="15dp"
+                            android:background="#1976d2"
+                            android:textColor="#FFF"
+                            android:textSize="14sp"
+                            android:text="ELIMINAR JUEVES" />
+
+                        <Button
+                            android:id="@+id/btnEliminarTodosClofit"
+                            android:layout_width="match_parent"
+                            android:layout_height="35dp"
+                            android:layout_marginLeft="15dp"
+                            android:layout_marginTop="30dp"
+                            android:layout_marginRight="15dp"
+                            android:background="#1976d2"
+                            android:textColor="#FFF"
+                            android:textSize="14sp"
+                            android:text="ELIMINAR TODOS" />
+                    </LinearLayout>
+                    <LinearLayout
+                        android:id="@+id/PILATE"
+                        android:textSize="2dp"
+                        android:layout_width="fill_parent"
+                        android:layout_height="475dp"
+                        android:gravity="center"
+                        android:orientation="vertical">
+
+                        <Button
+                            android:id="@+id/btnEliminarLunesPilates"
+                            android:layout_width="match_parent"
+                            android:layout_height="35dp"
+                            android:layout_marginLeft="15dp"
+                            android:layout_marginTop="30dp"
+                            android:layout_marginRight="15dp"
+                            android:background="#1976d2"
+                            android:textColor="#FFF"
+                            android:textSize="14sp"
+                            android:text="ELIMINAR LUNES" />
+
+                        <Button
+                            android:id="@+id/btnEliminarJuevesPilates"
+                            android:layout_width="match_parent"
+                            android:layout_height="35dp"
+                            android:layout_marginLeft="15dp"
+                            android:layout_marginTop="30dp"
+                            android:layout_marginRight="15dp"
+                            android:background="#1976d2"
+                            android:textColor="#FFF"
+                            android:textSize="14sp"
+                            android:text="ELIMINAR JUEVES" />
+
+                        <Button
+                            android:id="@+id/btnEliminarTodosPilates"
+                            android:layout_width="match_parent"
+                            android:layout_height="35dp"
+                            android:layout_marginLeft="15dp"
+                            android:layout_marginTop="30dp"
+                            android:layout_marginRight="15dp"
+                            android:background="#1976d2"
+                            android:textColor="#FFF"
+                            android:textSize="14sp"
+                            android:text="ELIMINAR TODOS" />
+                    </LinearLayout>
+                </FrameLayout>
+            </LinearLayout>
+        </TabHost>
+    </RelativeLayout>

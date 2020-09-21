@@ -6,7 +6,6 @@ import android.content.Intent;
 import android.os.Bundle;
 import android.util.Log;
 import android.view.View;
-import android.widget.AdapterView;
 import android.widget.ArrayAdapter;
 import android.widget.Button;
 import android.widget.EditText;
@@ -41,9 +40,9 @@ public class Main_AddBicicleta_Activity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main__add_bicicleta_);
 
-        edDia = (EditText) findViewById(R.id.edDia);
+        edDia = (EditText) findViewById(R.id.edFecha);
         edBici = (EditText) findViewById(R.id.edBici);
-        edUsuario = (EditText) findViewById(R.id.edUsuario);
+        edUsuario = (EditText) findViewById(R.id.edNick);
         edTelefono = (EditText) findViewById(R.id.edTelefono);
         tvIDPERSONA = (TextView) findViewById(R.id.tvIDPERSONA);
         tvIDBICI = (TextView) findViewById(R.id.tvIDBICI);
@@ -107,10 +106,10 @@ public class Main_AddBicicleta_Activity extends AppCompatActivity {
                     finish();
                 }else{
                     ejecutarServicio("http://jose-cordones.es/app/registros/registrar_bicicleta.php");
-                    Intent intent = new Intent(getApplicationContext(), Main_Inicio_Activity.class);
+                    Intent intent = new Intent(getApplicationContext(), Main_DiasBicicletas_Activity.class);
                     intent.putExtra("usuario", edUsuario.getText().toString());
+                    intent.setFlags(Intent.FLAG_ACTIVITY_CLEAR_TOP);
                     startActivity(intent);
-                    finish();
                 }
 
 

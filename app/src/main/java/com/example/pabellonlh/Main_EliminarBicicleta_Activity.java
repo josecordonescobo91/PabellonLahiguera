@@ -6,7 +6,6 @@ import android.content.Intent;
 import android.os.Bundle;
 import android.util.Log;
 import android.view.View;
-import android.widget.AdapterView;
 import android.widget.ArrayAdapter;
 import android.widget.Button;
 import android.widget.EditText;
@@ -38,9 +37,9 @@ public class Main_EliminarBicicleta_Activity extends AppCompatActivity {
 
         Intent intent = getIntent();
 
-        edDia = (EditText) findViewById(R.id.edDia);
-        edUsuario = (EditText) findViewById(R.id.edUsuario);
-        edBicicleta = (EditText) findViewById(R.id.edBicicleta);
+        edDia = (EditText) findViewById(R.id.edFecha);
+        edUsuario = (EditText) findViewById(R.id.edNick);
+        edBicicleta = (EditText) findViewById(R.id.edActividad);
         //edID = (EditText) findViewById(R.id.edID);
         tvIDALQUILER = (TextView) findViewById(R.id.tvIDALQUILER);
         tvprueba = (TextView) findViewById(R.id.tvprueba);
@@ -114,10 +113,10 @@ public class Main_EliminarBicicleta_Activity extends AppCompatActivity {
                 if(response.equals("1") || response.equals("2") || response.equals("3") || response.equals("4") || response.equals("5") || response.equals("6") || response.equals("7") || response.equals("8") || response.equals("9") || response.equals("10") || response.equals("11") || response.equals("12") || response.equals("13") || response.equals("14") || response.equals("15")  ){
                    // Toast.makeText(getApplicationContext(), "pasa", Toast.LENGTH_SHORT).show();
                     EliminarBici("http://jose-cordones.es/app/eliminaciones/eliminarBici.php?id_alquiler_bicicletas=" + id_alquiler_bicicletas);
-                    Intent intent = new Intent(getApplicationContext(), Main_Inicio_Activity.class);
+                    Intent intent = new Intent(getApplicationContext(), Main_MisAlquiler_Activity.class);
                     intent.putExtra("usuario", finalNick);
+                    intent.setFlags(Intent.FLAG_ACTIVITY_CLEAR_TOP);
                     startActivity(intent);
-                    finish();
                     Toast.makeText(getApplicationContext(), "BICICLETA ELIMINADA", Toast.LENGTH_SHORT).show();
                 }else{
                     String dia = edDia.getText().toString();
@@ -193,10 +192,10 @@ public class Main_EliminarBicicleta_Activity extends AppCompatActivity {
                     String finalNick = edUsuario.getText().toString();
                     String id_alquiler_bicicletas = tvIDALQUILER.getText().toString();
                     EliminarBici("http://jose-cordones.es/app/eliminaciones/eliminarBici.php?id_alquiler_bicicletas=" + id_alquiler_bicicletas);
-                    Intent intent = new Intent(getApplicationContext(), Main_Inicio_Activity.class);
+                    Intent intent = new Intent(getApplicationContext(), Main_MisAlquiler_Activity.class);
                     intent.putExtra("usuario", finalNick);
+                    intent.setFlags(Intent.FLAG_ACTIVITY_CLEAR_TOP);
                     startActivity(intent);
-                    finish();
                     Toast.makeText(getApplicationContext(), "BICICLETA ELIMINADA", Toast.LENGTH_SHORT).show();
                 }
 
@@ -297,10 +296,10 @@ public class Main_EliminarBicicleta_Activity extends AppCompatActivity {
         String finalNick = edUsuario.getText().toString();
         ActualizarBiciEliminada("http://jose-cordones.es/app/actualizaciones/actualizarBici.php?nick=" + nick +"&id_alquiler_bicicletas="+ id_alquiler_bicicletas +"&telefono="+ telefono);
         //Toast.makeText(Main_EliminarBicicleta_Activity.this,    nick + " "+id_alquiler_bicicletas, Toast.LENGTH_SHORT).show();
-        Intent intent = new Intent(getApplicationContext(), Main_Inicio_Activity.class);
+        Intent intent = new Intent(getApplicationContext(), Main_MisAlquiler_Activity.class);
         intent.putExtra("usuario", finalNick);
+        intent.setFlags(Intent.FLAG_ACTIVITY_CLEAR_TOP);
         startActivity(intent);
-        finish();
         Toast.makeText(getApplicationContext(), "BICICLETA ELIMINADA", Toast.LENGTH_SHORT).show();
 
 

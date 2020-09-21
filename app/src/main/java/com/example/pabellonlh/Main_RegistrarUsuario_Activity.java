@@ -26,7 +26,7 @@ public class Main_RegistrarUsuario_Activity extends AppCompatActivity {
 
     EditText nick, pass, nombre, apellido1, apellido2, telefono, email, direccion, localidad, provincia;
     Button btAgregar;
-    String usuario, con;
+    String usuario, con, tlf;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -49,16 +49,18 @@ public class Main_RegistrarUsuario_Activity extends AppCompatActivity {
             public void onClick(View v) {
                 usuario = nick.getText().toString();
                 con = pass.getText().toString();
-                if(!usuario.isEmpty() || !con.isEmpty()){
-                    if (!validarEmail(email.getText().toString())){
+                tlf = telefono.getText().toString();
+                if(usuario.isEmpty() || con.isEmpty() || tlf.isEmpty()) {
+                    Toast.makeText(Main_RegistrarUsuario_Activity.this, "NO SE PERMITE NICK, CONTRASEÑA O TELEFONO SIN RELLENAR", Toast.LENGTH_SHORT).show();
+                }else if (!validarEmail(email.getText().toString())){
                         Toast.makeText(Main_RegistrarUsuario_Activity.this, "EL CORREO NO ES CORRECTO", Toast.LENGTH_SHORT).show();
                         email.setText("");
-                    }else{
-                        validarUsuario("http://jose-cordones.es/app/consultas/comprobar_usuario_registro.php");
                     }
 
-                }else{
-                    Toast.makeText(Main_RegistrarUsuario_Activity.this, "NO SE PERMITE NICK O CONTRASEÑA SIN RELLENAR", Toast.LENGTH_SHORT).show();
+                else{
+                   // Toast.makeText(Main_RegistrarUsuario_Activity.this, "BIEN", Toast.LENGTH_SHORT).show();
+                    validarUsuario("http://jose-cordones.es/app/consultas/comprobar_usuario_registro.php");
+
                 }
 
             }
@@ -105,7 +107,7 @@ public class Main_RegistrarUsuario_Activity extends AppCompatActivity {
             @Override
             public void onResponse(String response) {
                 Intent intent = new Intent(Main_RegistrarUsuario_Activity.this, MainActivity.class);
-                Toast.makeText(getApplicationContext(), "REGISTRO CORRECTO", Toast.LENGTH_SHORT).show();
+                Toast.makeText(getApplicationContext(), "REGISTRO CORRECTO, ESPERE A SER ACTIVADO POR EL ADMINISTRADOR", Toast.LENGTH_SHORT).show();
                 startActivity(intent);
             }
         },new Response.ErrorListener(){
@@ -118,16 +120,20 @@ public class Main_RegistrarUsuario_Activity extends AppCompatActivity {
             @Override
             protected Map<String, String> getParams() throws AuthFailureError {
                 Map<String, String>parametros = new HashMap<String, String>();
+                String tipo = "usuario", activo = "pendiente";
+
                 parametros.put("nick", nick.getText().toString());
                 parametros.put("pass", pass.getText().toString());
                 parametros.put("nombre", nombre.getText().toString());
                 parametros.put("apellido1", apellido1.getText().toString());
                 parametros.put("apellido2", apellido2.getText().toString());
+                parametros.put("tipo", tipo);
                 parametros.put("telefono", telefono.getText().toString());
                 parametros.put("email", email.getText().toString());
                 parametros.put("direccion", direccion.getText().toString());
                 parametros.put("localidad", localidad.getText().toString());
                 parametros.put("provincia", provincia.getText().toString());
+                parametros.put("activo", activo);
 
                 return parametros;
             }

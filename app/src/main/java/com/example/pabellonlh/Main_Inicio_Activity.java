@@ -12,9 +12,9 @@ import android.widget.TextView;
 
 public class Main_Inicio_Activity extends AppCompatActivity {
 
-    Button btnCerrarSesion, btnMisAlquiler, btnMisBicicletas;
+    Button btnCerrarSesion, btnMisAlquiler, btnEditarMisDatos;
     TextView tvNombre;
-    //private AsyncHttpClient cliente;
+
     String usuario;
 
 
@@ -23,10 +23,14 @@ public class Main_Inicio_Activity extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main__inicio_);
-        tvNombre = findViewById(R.id.tvNombre);
+        tvNombre = findViewById(R.id.tvNombre1);
 
         Intent intent = getIntent();
+
+
+
         usuario = intent.getStringExtra("usuario");
+
 
         if(usuario == null){
             recuperarPreferendias();
@@ -36,8 +40,8 @@ public class Main_Inicio_Activity extends AppCompatActivity {
 
 
         btnCerrarSesion=findViewById(R.id.btnCerrarSesion);
-        btnMisAlquiler=findViewById(R.id.btnMisAlquiler);
-        btnMisBicicletas=findViewById(R.id.btnMisBicicletas);
+        btnMisAlquiler=findViewById(R.id.btnListados);
+        btnEditarMisDatos=findViewById(R.id.btnEditarMisDatos);
 
 
 
@@ -59,6 +63,20 @@ public class Main_Inicio_Activity extends AppCompatActivity {
             public void onClick(View v) {
 
                 Intent intent = new Intent(getApplicationContext(), Main_MisAlquiler_Activity.class);
+                intent.putExtra("usuario", usuario);
+                startActivity(intent);
+                //   finish();
+
+            }
+
+
+        });
+
+        btnEditarMisDatos.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+
+                Intent intent = new Intent(getApplicationContext(), Main_EditarMisDatosUsuario_Activity.class);
                 intent.putExtra("usuario", usuario);
                 startActivity(intent);
                 //   finish();
@@ -90,5 +108,6 @@ public class Main_Inicio_Activity extends AppCompatActivity {
     public void IrInicio (View view){
         Intent Inicio = new Intent(this, MainActivity.class);
         startActivity(Inicio);
+        finish();
     }
 }

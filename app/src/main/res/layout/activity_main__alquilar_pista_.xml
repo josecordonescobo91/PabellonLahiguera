@@ -14,7 +14,7 @@
         android:id="@+id/scrollView2"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        android:layout_marginTop="120dp"
+        android:layout_marginTop="150dp"
         tools:layout_editor_absoluteX="0dp"
         tools:layout_editor_absoluteY="0dp">
 
@@ -49,38 +49,14 @@
                 android:textSize="14sp" />
 
             <Button
-                android:id="@+id/btnClofit"
+                android:id="@+id/btnActividades"
                 android:layout_width="match_parent"
                 android:layout_height="35dp"
                 android:layout_marginLeft="15dp"
                 android:layout_marginTop="30dp"
                 android:layout_marginRight="15dp"
                 android:background="#1976d2"
-                android:text="CLOFIT"
-                android:textColor="#FFF"
-                android:textSize="14sp" />
-
-            <Button
-                android:id="@+id/btnZumba"
-                android:layout_width="match_parent"
-                android:layout_height="35dp"
-                android:layout_marginLeft="15dp"
-                android:layout_marginTop="30dp"
-                android:layout_marginRight="15dp"
-                android:background="#1976d2"
-                android:text="ZUMBA"
-                android:textColor="#FFF"
-                android:textSize="14sp" />
-
-            <Button
-                android:id="@+id/btnPilates"
-                android:layout_width="match_parent"
-                android:layout_height="35dp"
-                android:layout_marginLeft="15dp"
-                android:layout_marginTop="30dp"
-                android:layout_marginRight="15dp"
-                android:background="#1976d2"
-                android:text="PILATES"
+                android:text="ACTIVIDADES"
                 android:textColor="#FFF"
                 android:textSize="14sp" />
 

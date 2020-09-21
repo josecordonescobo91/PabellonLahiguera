@@ -30,7 +30,7 @@ public class Main_Precios_Activity extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main__precios_);
-        Toast.makeText(Main_Precios_Activity.this, "PRECIOS PABELLON LAHIGUERA", Toast.LENGTH_SHORT).show();
+        Toast.makeText(Main_Precios_Activity.this, "CON LUZ SE COBRARA 2€ MAS", Toast.LENGTH_SHORT).show();
         lvPrecios = (ListView) findViewById(R.id.lvPrecios);
         cliente = new AsyncHttpClient ();
         String consulta = "http://jose-cordones.es/app/consultas/obtenerPrecios.php";
@@ -74,11 +74,11 @@ public class Main_Precios_Activity extends AppCompatActivity {
 
         ArrayList<String> lista = new ArrayList<>();
 
-        for(int i=0;i<ja.length();i+=5){
+        for(int i=0;i<ja.length();i+=8){
 
             try {
 
-                lista.add("\n"+"PISTA                                     PRECIO"+"\n \n"+"FUTBOL 7                              "+ja.getString(i+2)+"€"+"\n \n"+"FUTBOL SALA                      "+ja.getString(i+3)+"€"+"\n \n"+"TENNIS                                  "+ja.getString(i+4)+"€"+"\n \n"+"PADEL                                    "+ja.getString(i+1)+"€");
+                lista.add("\n"+"               ACTIVIDAD                            PRECIO"+"\n \n"+"               FUTBOL 7                              "+ja.getString(i+1)+"€"+"\n \n"+"               FUTBOL SALA                      "+ja.getString(i+2)+"€"+"\n \n"+"               TENNIS                                  "+ja.getString(i+3)+"€"+"\n \n"+"               PADEL                                    "+ja.getString(i+4)+"€" +"\n \n"+"               SPINNING                              "+ja.getString(i+5)+"€"+"\n \n"+"               ZUMBA                                    "+ja.getString(i+6)+"€"+"\n \n"+"               CROSSFIT                                    "+ja.getString(i+7)+"€"+"\n \n"+"               PILATES                                  "+ja.getString(i+8)+"€");
             } catch (JSONException e) {
                 e.printStackTrace();
             }

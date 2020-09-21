@@ -1,0 +1,296 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    tools:context=".Main_Usuarios_Activity">
+
+        <TabHost
+            android:layout_width="fill_parent"
+            android:layout_height="fill_parent"
+            android:id="@+id/tabHost"
+            android:layout_alignParentTop="true"
+            android:layout_centerHorizontal="true">
+
+            <LinearLayout
+                android:layout_width="fill_parent"
+                android:layout_height="fill_parent"
+                android:orientation="vertical">
+
+                <TabWidget
+                    android:id="@android:id/tabs"
+                    android:layout_width="fill_parent"
+                    android:layout_height="56dp"></TabWidget>
+
+                <FrameLayout
+                    android:id="@android:id/tabcontent"
+                    android:layout_width="fill_parent"
+                    android:layout_height="fill_parent">
+
+                    <LinearLayout
+                        android:id="@+id/USUARIOS"
+                        android:layout_width="fill_parent"
+                        android:layout_height="614dp"
+                        android:orientation="vertical">
+
+                        <TextView
+                            android:id="@+id/textView"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="TextView"
+                            android:visibility="invisible" />
+
+                        <RelativeLayout
+                            android:layout_height="wrap_content" android:orientation="horizontal"
+                            android:layout_width="fill_parent">
+
+                            <EditText
+                                android:id="@+id/edFecha"
+                                android:layout_width="192dp"
+                                android:layout_height="wrap_content"
+                                android:layout_marginStart="-13dp"
+                                android:layout_marginLeft="-13dp"
+                                android:layout_marginEnd="3dp"
+                                android:layout_marginRight="3dp"
+                                android:layout_toStartOf="@+id/btnBuscar"
+                                android:layout_toLeftOf="@+id/btnBuscar"
+                                android:ems="10"
+                                android:inputType="textPersonName" />
+
+                            <Button
+
+                                android:id="@+id/btnCancelar"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_alignParentRight="true"
+                                android:layout_marginRight="8dp"
+                                android:background="#c7644f"
+                                android:text="cancelar"></Button>
+
+                            <Button
+
+                                android:id="@+id/btnBuscar"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_marginEnd="15dp"
+                                android:layout_marginRight="15dp"
+                                android:layout_toStartOf="@+id/btnCancelar"
+                                android:layout_toLeftOf="@+id/btnCancelar"
+                                android:background="#58b646"
+                                android:text="BUSCAR"></Button>
+
+
+                        </RelativeLayout>
+
+                        <TextView
+                            android:id="@+id/textView27"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:text="TextView"
+                            android:visibility="invisible" />
+
+                        <TextView
+                            android:id="@+id/tvNombre1"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:text="TextView"
+                            android:visibility="invisible"
+                            tools:visibility="invisible" />
+
+                        <TextView
+                            android:id="@+id/textView14"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:text="     TELEFONO               ACTIVO     NICK"
+                            android:textColor="#3F51B5"
+                            android:textStyle="bold" />
+
+                        <ScrollView
+                            android:layout_width="match_parent"
+                            android:layout_height="528dp">
+
+                            <RelativeLayout
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:orientation="vertical" >
+
+                                <ListView
+                                    android:id="@+id/lvUsuarios"
+                                    android:layout_width="match_parent"
+                                    android:layout_height="521dp" />
+
+                                <ListView
+                                    android:id="@+id/lvBusquedaUsuario"
+                                    android:layout_width="fill_parent"
+                                    android:layout_height="400dp"
+                                    android:orientation="horizontal"/>
+
+                            </RelativeLayout>
+                        </ScrollView>
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:id="@+id/CREAR"
+                        android:layout_width="fill_parent"
+                        android:layout_height="550dp"
+                        android:orientation="vertical">
+
+                        <ScrollView
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:layout_marginTop="10dp">
+
+                            <LinearLayout
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_marginVertical="5dp"
+                                android:orientation="vertical">
+
+                                <EditText
+                                    android:id="@+id/nick"
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:layout_marginVertical="2dp"
+                                    android:layout_marginStart="8dp"
+                                    android:layout_marginEnd="8dp"
+                                    android:ems="100"
+                                    android:gravity="center"
+                                    android:hint="NICK"
+                                    android:inputType="textPersonName"
+                                    android:paddingLeft="5dp" />
+
+                                <EditText
+                                    android:id="@+id/pass"
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:layout_marginVertical="2dp"
+                                    android:layout_marginStart="8dp"
+                                    android:layout_marginEnd="8dp"
+                                    android:ems="100"
+                                    android:gravity="center"
+                                    android:hint="CONTRASEÑA"
+                                    android:inputType="textPassword"
+                                    android:paddingLeft="5dp" />
+
+                                <EditText
+                                    android:id="@+id/nombre"
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:layout_marginVertical="2dp"
+                                    android:layout_marginStart="8dp"
+                                    android:layout_marginEnd="8dp"
+                                    android:ems="100"
+                                    android:gravity="center"
+                                    android:hint="NOMBRE"
+                                    android:inputType="textPersonName"
+                                    android:paddingLeft="5dp" />
+
+                                <EditText
+                                    android:id="@+id/apellido1"
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:layout_marginVertical="2dp"
+                                    android:layout_marginStart="8dp"
+                                    android:layout_marginEnd="8dp"
+                                    android:ems="100"
+                                    android:gravity="center"
+                                    android:hint="PRIMER APELLIDO"
+                                    android:inputType="textPersonName"
+                                    android:paddingLeft="5dp" />
+
+                                <EditText
+                                    android:id="@+id/apellido2"
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:layout_marginVertical="2dp"
+                                    android:layout_marginStart="8dp"
+                                    android:layout_marginEnd="8dp"
+                                    android:ems="100"
+                                    android:gravity="center"
+                                    android:hint="SEGUNDO APELLIDO"
+                                    android:inputType="textPersonName"
+                                    android:paddingLeft="5dp" />
+
+                                <EditText
+                                    android:id="@+id/telefono"
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:layout_marginVertical="2dp"
+                                    android:layout_marginStart="8dp"
+                                    android:layout_marginEnd="8dp"
+                                    android:ems="100"
+                                    android:gravity="center"
+                                    android:hint="TELEFONO"
+                                    android:inputType="phone"
+                                    android:paddingLeft="5dp" />
+
+                                <EditText
+                                    android:id="@+id/email"
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:layout_marginVertical="2dp"
+                                    android:layout_marginStart="8dp"
+                                    android:layout_marginEnd="8dp"
+                                    android:ems="100"
+                                    android:gravity="center"
+                                    android:hint="CORREO"
+                                    android:inputType="textEmailAddress"
+                                    android:paddingLeft="5dp" />
+
+                                <EditText
+                                    android:id="@+id/direccion"
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:layout_marginVertical="2dp"
+                                    android:layout_marginStart="8dp"
+                                    android:layout_marginEnd="8dp"
+                                    android:ems="100"
+                                    android:gravity="center"
+                                    android:hint="DIRECCION"
+                                    android:inputType="textPersonName"
+                                    android:paddingLeft="5dp" />
+
+                                <EditText
+                                    android:id="@+id/localidad"
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:layout_marginVertical="2dp"
+                                    android:layout_marginStart="8dp"
+                                    android:layout_marginEnd="8dp"
+                                    android:ems="100"
+                                    android:gravity="center"
+                                    android:hint="LOCALIDAD"
+                                    android:inputType="textPersonName"
+                                    android:paddingLeft="5dp" />
+
+                                <EditText
+                                    android:id="@+id/provincia"
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:layout_marginVertical="2dp"
+                                    android:ems="100"
+                                    android:gravity="center"
+                                    android:hint="PROVINCIA"
+                                    android:inputType="textPersonName"
+                                    android:paddingLeft="5dp" />
+
+                                <Button
+                                    android:id="@+id/btAgregar"
+                                    android:layout_width="match_parent"
+                                    android:layout_height="35dp"
+                                    android:layout_marginLeft="15dp"
+                                    android:layout_marginTop="5dp"
+                                    android:layout_marginRight="15dp"
+                                    android:background="#1976d2"
+                                    android:textColor="#FFF"
+                                    android:textSize="14sp"
+                                    android:text="REGISTRAR" />
+                            </LinearLayout>
+                        </ScrollView>
+                    </LinearLayout>
+
+                </FrameLayout>
+            </LinearLayout>
+        </TabHost>
+    </RelativeLayout>
+
